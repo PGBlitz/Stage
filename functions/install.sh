@@ -9,27 +9,27 @@ source /opt/plexguide/functions/core.sh
 source /opt/plexguide/functions/easy.sh
 
 # install support
-source /opt/plexguide/functions/install/aptupdate.sh
-source /opt/plexguide/functions/install/cleaner.sh
-source /opt/plexguide/functions/install/dependency.sh
-source /opt/plexguide/functions/install/docker.sh
-source /opt/plexguide/functions/install/customcontainers.sh
-source /opt/plexguide/functions/install/gcloud.sh
-source /opt/plexguide/functions/install/emergency.sh
-source /opt/plexguide/functions/install/hetzner.sh
-source /opt/plexguide/functions/install/mergerfs.sh
-source /opt/plexguide/functions/install/mountcheck.sh
-source /opt/plexguide/functions/install/newinstall.sh
-source /opt/plexguide/functions/install/pgdeploy.sh
-source /opt/plexguide/functions/install/pgedition.sh
-source /opt/plexguide/functions/install/pgui.sh
-source /opt/plexguide/functions/install/portainer.sh
-source /opt/plexguide/functions/install/pythonstart.sh
-source /opt/plexguide/functions/install/serverid.sh
-source /opt/plexguide/functions/install/watchtower.sh
-source /opt/plexguide/functions/install/pginstall.sh
-source /opt/plexguide/functions/install/prune.sh
-source /opt/plexguide/functions/install/pgshield.sh
+source /pg/stage/functions/install/aptupdate.sh
+source /pg/stage/functions/install/cleaner.sh
+source /pg/stage/functions/install/dependency.sh
+source /pg/stage/functions/install/docker.sh
+source /pg/stage/functions/install/customcontainers.sh
+source /pg/stage/functions/install/gcloud.sh
+source /pg/stage/functions/install/emergency.sh
+source /pg/stage/functions/install/hetzner.sh
+source /pg/stage/functions/install/mergerfs.sh
+source /pg/stage/functions/install/mountcheck.sh
+source /pg/stage/functions/install/newinstall.sh
+source /pg/stage/functions/install/pgdeploy.sh
+source /pg/stage/functions/install/pgedition.sh
+source /pg/stage/functions/install/pgui.sh
+source /pg/stage/functions/install/portainer.sh
+source /pg/stage/functions/install/pythonstart.sh
+source /pg/stage/functions/install/serverid.sh
+source /pg/stage/functions/install/watchtower.sh
+source /pg/stage/functions/install/pginstall.sh
+source /pg/stage/functions/install/prune.sh
+source /pg/stage/functions/install/pgshield.sh
 
 updateprime () {
 # easy start var for easy installer
