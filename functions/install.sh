@@ -5,63 +5,39 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-source /opt/plexguide/functions/core.sh
-source /opt/plexguide/functions/easy.sh
+path78="/pg/stage/functions"
+path79="/pg/stage/functions/install"
 
-# install support
-source /pg/stage/functions/install/aptupdate.sh
-source /pg/stage/functions/install/cleaner.sh
-source /pg/stage/functions/install/dependency.sh
-source /pg/stage/functions/install/docker.sh
-source /pg/stage/functions/install/customcontainers.sh
-source /pg/stage/functions/install/gcloud.sh
-source /pg/stage/functions/install/emergency.sh
-source /pg/stage/functions/install/hetzner.sh
-source /pg/stage/functions/install/mergerfs.sh
-source /pg/stage/functions/install/mountcheck.sh
-source /pg/stage/functions/install/newinstall.sh
-source /pg/stage/functions/install/pgdeploy.sh
-source /pg/stage/functions/install/pgedition.sh
-source /pg/stage/functions/install/pgui.sh
-source /pg/stage/functions/install/portainer.sh
-source /pg/stage/functions/install/pythonstart.sh
-source /pg/stage/functions/install/serverid.sh
-source /pg/stage/functions/install/watchtower.sh
-source /pg/stage/functions/install/pginstall.sh
-source /pg/stage/functions/install/prune.sh
-source /pg/stage/functions/install/pgshield.sh
+# key parts
+source "${path78}/core.sh"
+source "${path78}/easy.sh"
+
+# assistive parts
+source "${path79}/aptupdate.sh"
+source "${path79}/cleaner.sh"
+source "${path79}/dependency.sh"
+source "${path79}/docker.sh"
+source "${path79}/customcontainers.sh"
+source "${path79}/gcloud.sh"
+source "${path79}/emergency.sh"
+source "${path79}/hetzner.sh"
+source "${path79}/mergerfs.sh"
+source "${path79}/mountcheck.sh"
+source "${path79}/newinstall.sh"
+source "${path79}/pgdeploy.sh"
+source "${path79}/pgedition.sh"
+source "${path79}/pgui.sh"
+source "${path79}/portainer.sh"
+source "${path79}/pythonstart.sh"
+source "${path79}/serverid.sh"
+source "${path79}/watchtower.sh"
+source "${path79}/pginstall.sh"
+source "${path79}/prune.sh"
+source "${path79}/pgshield.sh"
 
 updateprime () {
 # easy start var for easy installer
 easy=off
-
-# Changing the Numbers will Force a Certain Section to Rerun
-abc="/pg/var"
-mkdir -p /pg/var
-chmod 0775 /pg/var
-chown 1000:1000 /pg/var
-
-# make old file system incase
-mkdir -p /var/plexguide
-chmod 0775 /var/plexguide
-chown 1000:1000 /var/plexguide
-
-mkdir -p /opt/appdata/plexguide
-chmod 0775 /opt/appdata/plexguide
-chown 1000:1000 /opt/appdata/plexguide
-
-# new folder system
-mkdir -p /pg/data/blitz
-chmod 0775 /pg/data/blitz
-chown 1000:1000 /pg/data/blitz
-
-mkdir -p /pg/var
-chmod 0775 /pg/var
-chown 1000:1000 /pg/var
-
-mkdir -p /pg/pg/tmp
-chmod 0775 /pg/pg/tmp
-chown 1000:1000 /pg/pg/tmp
 
 core serverid
 # default variables that get created; important to the project start
