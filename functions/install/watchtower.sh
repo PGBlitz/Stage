@@ -21,7 +21,7 @@ if [[ "$easy" != "on" ]]; then
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📂  PG WatchTower Edition          📓 Reference: watchtower.pgblitz.com
+📂  PG WatchTower Edition ~ 📓 Reference: watchtower.pgblitz.com
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 💬  WatchTower updates your containers soon as possible!
