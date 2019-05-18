@@ -10,6 +10,10 @@ path27="/pg/stage/functions"
 source "${path27}/functions.sh"
 source "${path27}/start.sh"
 source "${path27}/install.sh"
+source "${path27}/variables.sh"
+
+# Execute Key Variables from variables.sh
+keyvars
 
 # Make Critical Folders
 var59="/pg /pg/logs /pg/var /pg/data /pg/stage /pg/logs /pg/tmp"

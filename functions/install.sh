@@ -40,20 +40,8 @@ updateprime () {
 easy=off
 
 core serverid
-# default variables that get created; important to the project start
-variable /pg/var/pgfork.project "UPDATE ME"
-variable /pg/var/pgfork.version "changeme"
-variable /pg/var/tld.program "portainer"
-variable /pg/data/blitz/plextoken ""
-variable /pg/var/server.ht ""
-variable /pg/var/server.email "NOT-SET"
-variable /pg/var/server.domain "NOT-SET"
-variable /pg/var/pg.number "New-Install"
-variable /pg/var/emergency.log ""
-variable /pg/var/pgbox.running ""
-pgnumber=$(cat /pg/var/pg.number)
 
-hostname -I | awk '{print $1}' > /pg/var/server.ip
+
 file="pg/var/server.hd.path"
 if [ ! -e "$file" ]; then echo "/mnt" > /pg/var/server.hd.path; fi
 
