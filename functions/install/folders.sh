@@ -14,8 +14,7 @@ folders () {
       chmod 0775 "$1"; fi
   }
 
-
-  #start 
+  #start
   fcreate /pg/transfer
 
   #gcrypt
@@ -53,7 +52,10 @@ folders () {
     fcreate /pg/coreapps
     fcreate /pg/communityapps
     fcreate /pg/transfer
-
-
+    fcreate /pg/logs
+    fcreate /pg/var/keys
+    fcreate /pg/nzb
+    fcreate /pg/torrent
+    fcreate /pg/downloads
 
 }
