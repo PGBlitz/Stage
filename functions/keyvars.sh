@@ -18,7 +18,6 @@ vartouch () {
 }
 
 core () {
-
     path95="/pg/var/install"
     mkdir -p "${path95}"
     vartouch "${path95}/${1}.stored"
