@@ -68,12 +68,12 @@ folders () { bash /pg/stage/functions/install/folders.sh }
 motd () { ansible-playbook /opt/plexguide/menu/motd/motd.yml }
 prune () { ansible-playbook /opt/plexguide/menu/prune/main.yml }
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
-pgcore() { if [ ! -e "/opt/coreapps/place.holder" ]; then ansible-playbook /opt/plexguide/menu/pgbox/pgboxcore.yml; fi }
+pgcore() { if [ ! -e "/opt/coreapps/place.holder" ]; then ansible-playbook /pg/appscore/pgboxcore.yml; fi }
 pgcommunity() { if [ ! -e "/opt/communityapps/place.holder" ]; then ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi }
 
 downloadpg() {
   rm -rf /opt/plexguide
-  git clone https://github.com/PGBlitz/PGBlitz.com.git /opt/plexguide && cp /opt/plexguide/menu/interface/alias/templates/plexguide /bin/
+  git clone https://github.com/PGBlitz/PGBlitz.com.git /opt/plexguide && cp /pg/appscommunity/menu/interface/alias/templates/plexguide /bin/
   cp /opt/plexguide/menu/interface/alias/templates/plexguide /bin/plexguide
 }
 

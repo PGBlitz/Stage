@@ -21,3 +21,20 @@ variable () {
   file="$1"
   if [ ! -e "$file" ]; then echo "$2" > $1; fi
 }
+
+vartouch () {
+  file="$1"
+  if [ ! -e "$file" ]; then touch "$1"; fi
+}
+
+core () {
+    path95="/pg/var/install"
+    mkdir -p "${path95}"
+    vartouch "${path95}/${1}.stored"
+    start=$(cat "${path95}/${1}")
+    stored=$(cat "${path95}/${1}".stored)
+    if [ "$start" != "$stored" ]; then
+      $1
+      cat "${path95}/${1}" > "${path95}.${1}.stored";
+    fi
+}
