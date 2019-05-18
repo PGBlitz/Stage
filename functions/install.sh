@@ -42,15 +42,6 @@ easy=off
 core serverid
 
 
-file="pg/var/server.hd.path"
-if [ ! -e "$file" ]; then echo "/mnt" > /pg/var/server.hd.path; fi
-
-file="pg/var/new.install"
-if [ ! -e "$file" ]; then newinstall; fi
-
-ospgversion=$(cat /etc/*-release | grep Debian | grep 9)
-if [ "$ospgversion" != "" ]; then echo "debian"> /pg/var/os.version;
-else echo "ubuntu" > /pg/var/os.version; fi
 
 # Set variable numbers, plus number up to force update
 pgstore "install.merger" "1"
@@ -74,18 +65,7 @@ pgstore "install.installer" "1"
 pgstore "install.prune" "1"
 pgstore "install.mountcheck" "1"
 }
-######################################################### Core INSTALLER
-core () {
-# This process is a function for the menu run down above
-    touch /pg/var/install."${1}".stored
-    start=$(cat /pg/var/install."${1}")
-    stored=$(cat /pg/var/install."${1}".stored)
-    if [ "$start" != "$stored" ]; then
-      $1
-      cat /pg/var/pg."${1}" > /pg/var/pg."${1}".stored;
-    fi
-}
-######################################################### Simple Functions
+
 alias_install () { ansible-playbook /opt/plexguide/menu/alias/alias.yml }
 folders () { ansible-playbook /opt/plexguide/menu/installer/folders.yml }
 motd () { ansible-playbook /opt/plexguide/menu/motd/motd.yml }
