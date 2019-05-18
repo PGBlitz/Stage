@@ -12,8 +12,10 @@ folders () {
       mkdir -p "$1"
       chown 1000:1000 "$1"
       chmod 0775 "$1"; fi
+      echo "Folder Generated: $1"
   }
 
+  echo ""
   #start
   fcreate /pg/transfer
 
@@ -57,5 +59,4 @@ folders () {
     fcreate /pg/nzb
     fcreate /pg/torrent
     fcreate /pg/downloads
-
 }
