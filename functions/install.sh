@@ -38,10 +38,7 @@ source "${path79}/pgshield.sh"
 updateprime () {
 # easy start var for easy installer
 easy=off
-
 core serverid
-
-
 
 # Set variable numbers, plus number up to force update
 pgstore "install.merger" "1"
