@@ -5,30 +5,17 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-file="/pg/var/pg.number"
-if [ -e "$file" ]; then
-  check="$(cat /pg/var/pg.number | head -c 1)"
-  if [[ "$check" == "5" || "$check" == "6" || "$check" == "7" ]]; then
+path27="/pg/stage/functions"
 
-tee <<-EOF
+source "${path27}/functions.sh"
+source "${path27}/start.sh"
+source "${path27}/install.sh"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🌎  INSTALLER BLOCK: Notice
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-We detected PG Version $check is running! Per the instructions, PG 8
-must be installed on a FRESH BOX! Exiting!
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EOF
-    exit; fi; fi
-
-source /opt/plexguide/menu/functions/functions.sh
-source /opt/plexguide/menu/functions/start.sh
-source /opt/plexguide/menu/functions/install.sh
-
-mkdir -p /opt/plexguide/roles/log
-mkdir -p /pg/var/logs
-mkdir -p /pg/data/blitz
+# Make Critical Folders
+var59="/pg /pg/logs /pg/var /pg/data /pg/stage /pg/logs /pg/tmp"
+mkdir -p "${var59}"
+chmod 775 "${var59}"
+chown 1000:1000 "${var59}"
 
 sudocheck
 missingpull
@@ -38,5 +25,6 @@ if [[ ! -e "/bin/pgblitz" ]]; then
   chown 1000:1000 /bin/pgblitz
   chmod 0755 /bin/pgblitz
 fi
+
 # pg deploy contains pgdeploy at end
 pginstall
