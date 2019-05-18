@@ -13,7 +13,7 @@ ccommands () {
       cp "/pg/stage/alias/$1" "/bin/$1"
       chown 1000:1000 "/bin/$1"
       chmod 0775 "/bin/$1"
-      echo "Alias Command: Installed $1"
+      echo "Alias Command: Installed [$1]"
   }
 
   #start

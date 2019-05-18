@@ -47,7 +47,7 @@ pgstore "install.apt" "1"
 pgstore "install.preinstall" "1"
 pgstore "install.folders" "1"
 pgstore "install.docker" "1"
-pgstore "install.server" "1"
+pgstore "install.server" "1"3
 pgstore "install.serverid" "1"
 pgstore "install.dependency" "1"
 pgstore "install.dockerstart" "1"
@@ -63,8 +63,8 @@ pgstore "install.prune" "1"
 pgstore "install.mountcheck" "1"
 }
 
-alias_install () { ansible-playbook /opt/plexguide/menu/alias/alias.yml }
-folders () { ansible-playbook /opt/plexguide/menu/installer/folders.yml }
+alias_install () { ansible-playbook /pg/stage/alias/ccomands.sh }
+folders () { bash /pg/stage/functions/install/folders.sh }
 motd () { ansible-playbook /opt/plexguide/menu/motd/motd.yml }
 prune () { ansible-playbook /opt/plexguide/menu/prune/main.yml }
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
