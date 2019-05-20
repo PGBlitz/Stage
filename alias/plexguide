@@ -9,7 +9,7 @@ path27="/pg/stage/functions"
 
 source "${path27}/core.sh"
 source "${path27}/keyvars.sh"
-source "${path27}/install.sh"
+source "/pg/stage/install.sh"
 
 # Execute Key Variables from variables.sh
 keyvars
