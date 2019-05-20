@@ -17,5 +17,5 @@
       git:
         repo: "https://github.com/PGBlitz/PGBlitz.com"
         dest: /pg/pgblitz
-        version: "900"
+        version: "90"
         force: yes
