@@ -29,7 +29,6 @@ if [[ ! -e "/bin/pgblitz" ]]; then
   chmod 0755 /bin/pgblitz
 fi
 
-# pg will install if a new install was setup or forced
-if [ -e "/pg/var/new.install" ]; then
-  pginstall
-fi
+# if new install or update is conducted, runs through pginstall
+if [ -e "/pg/var/new.install" ]; then pginstall;
+elif [ -e "/pg/var/update.install" ]; then pginstall; fi

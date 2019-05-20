@@ -10,6 +10,7 @@ path78="/pg/stage/functions"
 # key parts
 source "${path78}/core.sh"
 source "${path78}/easy.sh"
+source "/pg/stage/versions.sh"
 
 # assistive parts
 source "${path78}/aptupdate.sh"
@@ -40,26 +41,7 @@ easy=off
 core serverid
 
 # Set variable numbers, plus number up to force update
-pgstore "install.merger" "1"
-pgstore "install.python" "1"
-pgstore "install.apt" "1"
-pgstore "install.preinstall" "1"
-pgstore "install.folders" "1"
-pgstore "install.docker" "1"
-pgstore "install.server" "1"
-pgstore "install.serverid" "1"
-pgstore "install.dependency" "1"
-pgstore "install.dockerstart" "1"
-pgstore "install.motd" "1"
-pgstore "install.alias" "1"
-pgstore "install.cleaner" "1"
-pgstore "install.gcloud" "1"
-pgstore "install.hetzner" "1"
-pgstore "install.amazonaws" "1"
-pgstore "install.watchtower" "1"
-pgstore "install.installer" "1"
-pgstore "install.prune" "1"
-pgstore "install.mountcheck" "1"
+versioninfo
 }
 
 alias_install () { ansible-playbook /pg/stage/alias/ccomands.sh }
