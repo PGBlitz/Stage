@@ -9,7 +9,6 @@ path78="/pg/stage/functions"
 
 # key parts
 source "${path78}/core.sh"
-source "${path78}/easy.sh"
 source "/pg/stage/versions.sh"
 
 # assistive parts
@@ -37,7 +36,6 @@ source "${path78}/pgshield.sh"
 
 updateprime () {
 # easy start var for easy installer
-easy=off
 core serverid
 
 # Set variable numbers, plus number up to force update
