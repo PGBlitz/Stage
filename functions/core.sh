@@ -35,6 +35,7 @@ core () {
     stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
     if [ "$start" != "$stored" ]; then
       $1
+      bash "/pg/stage/functions/${1}"
       cat "${path95}/${1}" > "${path95}.${1}.stored";
     fi
 }
