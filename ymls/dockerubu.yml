@@ -98,6 +98,7 @@
 
   - name: Check docker daemon.json exists
     stat:
+      path: /etc/docker/daemon.json
     register: docker_daemon
 
   - name: Stop docker to enable overlay2
