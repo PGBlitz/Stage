@@ -69,7 +69,7 @@ downloadpg() {
 }
 
 exitcheck() {
-bash /opt/plexguide/menu/version/file.sh
+  bash /opt/plexguide/menu/version/file.sh
 file="/pg/var/exited.upgrade"
 if [ ! -e "$file" ]; then
 	bash /opt/plexguide/menu/interface/ending.sh
