@@ -8,9 +8,9 @@
 dockerinstall () {
   ospgversion=$(cat /pg/var/os.version)
   if [ "$ospgversion" == "debian" ]; then
-    ansible-playbook /opt/plexguide/menu/pg.yml --tags dockerdeb
+    ansible-playbook /pg/stage/ymls/dockerdeb.yml
   else
-    ansible-playbook /opt/plexguide/menu/pg.yml --tags docker
+    ansible-playbook /pg/stage/ymls/dockerubu.yml
     # If Docker FAILED, Emergency Install
     file="/usr/bin/docker"
     if [ ! -e "$file" ]; then
