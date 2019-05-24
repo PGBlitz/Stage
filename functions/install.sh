@@ -14,6 +14,9 @@ versioninfo
 
 echo "FLAG - Installing Key Functions"
 
+# establish temp variables
+path78="/pg/stage/functions"
+
 # key parts
 source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
