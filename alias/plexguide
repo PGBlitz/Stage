@@ -21,7 +21,7 @@ chmod 775 "${var59}"
 chown 1000:1000 "${var59}"
 
 # Ensures the user has proper permissions
-sudocheck
+#sudocheck
 
 if [[ ! -e "/bin/pgblitz" ]]; then
   cp /opt/plexguide/menu/alias/templates/pgblitz /bin/ &>/dev/null &
