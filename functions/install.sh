@@ -7,9 +7,13 @@
 ################################################################################
 path78="/pg/stage/functions"
 
+echo "FLAG - Going through keyparts"
+
 # key parts
 source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
+
+echo "FLAG - Going through process"
 
 # assistive parts
 source "${path78}/aptupdate.sh"
