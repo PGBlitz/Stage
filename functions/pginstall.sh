@@ -8,7 +8,7 @@
 pginstall () {
 # Runs through the install process order
   updateprime
-  bash /opt/plexguide/menu/pggce/gcechecker.sh
+  bash /pg/stage/functions/gcechecker.sh
   # - good - core pythonstart
   # - good - core aptupdate
   core alias_install &>/dev/null &
