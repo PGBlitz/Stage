@@ -6,13 +6,11 @@
 # GNU:        General Public License v3.0
 ################################################################################
 updateprime () {
-# easy start var for easy installer
-core serverid
 
 # Set variable numbers, plus number up to force update
 versioninfo
 
-echo "FLAG - Installing Key Functions"
+echo "SYSTEM: Installing Key Functions"
 
 # establish temp variables
 path78="/pg/stage/functions"
@@ -23,9 +21,11 @@ source "/pg/stage/versions.sh"
 
 echo "SYSTEM: Installing Main Functions"
 
+# easy start var for easy installer
+core serverid
+
 # assistive parts
 source "${path78}/aptupdate.sh"
-source "${path78}/cleaner.sh"
 source "${path78}/dependency.sh"
 source "${path78}/docker.sh"
 source "${path78}/folders.sh"
