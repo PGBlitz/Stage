@@ -9,7 +9,7 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-    
+
   - name: "Establish Facts"
     set_fact:
       switch: "on"
@@ -54,7 +54,7 @@
 
   - name: Official Repo
     apt_repository:
-      repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} edge"
+      repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu Ubuntu edge"
     register: apt_docker_repositories
     when: switch == "on"
 
