@@ -37,7 +37,6 @@ fi
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud
-  core cleaner &>/dev/null &
   core watchtower
   core prune
   customcontainers &>/dev/null &
