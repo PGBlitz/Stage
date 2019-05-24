@@ -25,6 +25,7 @@ echo "SYSTEM: Installing Main Functions"
 
 # assistive parts
 source "${path78}/aptupdate.sh"
+source "${path78}/folders.sh"
 source "${path78}/cleaner.sh"
 # - good - source "${path78}/dependency.sh"
 source "${path78}/docker.sh"

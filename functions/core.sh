@@ -36,7 +36,6 @@ core () {
     #if [ "$start" != "$stored" ]; then
     if [ "0" != "1" ]; then #this is temp
       $1
-      bash "/pg/stage/functions/${1}"
       cat "${path95}/${1}" > "${path95}.${1}.stored";
     fi
 }
