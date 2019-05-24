@@ -8,7 +8,7 @@
 dependency () {
   ospgversion=$(cat /pg/var/os.version)
   if [ "$ospgversion" == "debian" ]; then
-    ansible-playbook /opt/plexguide/menu/dependency/dependencydeb.yml;
+    ansible-playbook /pg/stage/ymls/dependencydeb.yml;
   else
-    ansible-playbook /opt/plexguide/menu/dependency/dependency.yml; fi
+    ansible-playbook /pg/stage/ymls/dependencyubu.yml; fi
 }
