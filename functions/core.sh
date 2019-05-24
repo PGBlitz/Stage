@@ -33,7 +33,8 @@ core () {
     vartouch "${path95}/${1}.stored"
     start=$(cat "${path95}/${1}" 1>/dev/null 2>&1)
     stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
-    if [ "$start" != "$stored" ]; then
+    #if [ "$start" != "$stored" ]; then
+    if [ "0" != "1" ]; then #this is temp
       $1
       bash "/pg/stage/functions/${1}"
       cat "${path95}/${1}" > "${path95}.${1}.stored";
