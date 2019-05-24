@@ -59,4 +59,6 @@ folders () {
     fcreate /pg/nzb
     fcreate /pg/torrent
     fcreate /pg/downloads
+
+echo ""    
 }
