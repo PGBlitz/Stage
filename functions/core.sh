@@ -7,7 +7,7 @@
 ################################################################################
 pgstore () {
   maindir="/pg/var"
-  if [[ ! -e "${maindir}/${1}" ]]; then touch "${maindir}/${1}"; fi
+  if [[ ! -e "${maindir}/${1}" ]]; then echo "${2}" > "${maindir}/${1}"; fi
   echo "${2}" > "${maindir}/${1}"
 }
 
@@ -36,6 +36,6 @@ core () {
     #if [ "$start" != "$stored" ]; then
     if [ "0" != "1" ]; then #this is temp
       $1
-      cat "${path95}/${1}" > "${path95}.${1}.stored";
+      cat "${path95}/${1}" > "install.${path95}.${1}.stored";
     fi
 }
