@@ -15,7 +15,7 @@ pginstall () {
   core folders
   serverid
   # - good - core dependency
-  core mergerinstall
+  # - good - core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall
   core docstart
 
