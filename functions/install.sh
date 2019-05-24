@@ -45,10 +45,8 @@ source "${path78}/pgshield.sh"
 
 }
 
-alias_install () {
-  ansible-playbook /pg/stage/alias/ccomands.sh }
-folders () {
-  bash /pg/stage/functions/install/folders.sh }
+alias_install () { bash /pg/stage/alias/ccomands.sh }
+folders () { bash /pg/stage/functions/install/folders.sh }
 motd () {
   ansible-playbook /opt/plexguide/menu/motd/motd.yml }
 prune () {
