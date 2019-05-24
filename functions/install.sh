@@ -5,15 +5,20 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-path78="/pg/stage/functions"
+updateprime () {
+# easy start var for easy installer
+core serverid
 
-echo "FLAG - Going through keyparts"
+# Set variable numbers, plus number up to force update
+versioninfo
+
+echo "FLAG - Installing Key Functions"
 
 # key parts
 source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
 
-echo "FLAG - Going through process"
+echo "SYSTEM: Installing Main Functions"
 
 # assistive parts
 source "${path78}/aptupdate.sh"
@@ -35,15 +40,9 @@ source "${path78}/pythonstart.sh"
 source "${path78}/serverid.sh"
 source "${path78}/watchtower.sh"
 source "${path78}/pginstall.sh"
-source "${path78}/prune.sh"
+#source "${path78}/prune.sh"
 source "${path78}/pgshield.sh"
 
-updateprime () {
-# easy start var for easy installer
-core serverid
-
-# Set variable numbers, plus number up to force update
-versioninfo
 }
 
 alias_install () { ansible-playbook /pg/stage/alias/ccomands.sh }
