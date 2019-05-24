@@ -13,6 +13,7 @@ pginstall () {
   # - good - core aptupdate
   core alias_install &>/dev/null &
   core folders
+  serverid
   # - good - core dependency
   core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall
