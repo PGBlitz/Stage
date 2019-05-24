@@ -9,11 +9,11 @@ pginstall () {
 # Runs through the install process order
   updateprime
   bash /opt/plexguide/menu/pggce/gcechecker.sh
-  core pythonstart
-  core aptupdate
+  # - good - core pythonstart
+  # - good - core aptupdate
   core alias_install &>/dev/null &
   core folders
-  core dependency
+  # - good - core dependency
   core mergerinstall
   core dockerinstall
   core docstart
@@ -33,10 +33,10 @@ if [[ $(cat /pg/var/install.roles) != "$rolenumber" ]]; then
 fi
 
   portainer
-  pgui
+  # !!! fix !!! - pgui
   core motd &>/dev/null &
   core hetzner &>/dev/null &
-  core gcloud
+  # [good] core gcloud
   core cleaner &>/dev/null &
   core watchtower
   core prune
