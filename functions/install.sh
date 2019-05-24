@@ -42,7 +42,6 @@ source "${path78}/watchtower.sh"
 source "${path78}/pginstall.sh"
 #source "${path78}/prune.sh"
 source "${path78}/pgshield.sh"
-
 }
 
 alias_install () { bash /pg/stage/alias/ccomands.sh }
