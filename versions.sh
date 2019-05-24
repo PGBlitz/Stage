@@ -13,6 +13,7 @@ source "/pg/stage/functions/core.sh"
 
 versioninfo () {
 # Set variable numbers, plus number up to force update
+# PGStore command can be found @ core.sh
 pgstore "install.merger" "1"
 pgstore "install.python" "1"
 pgstore "install.apt" "1"
@@ -30,6 +31,6 @@ pgstore "install.gcloud" "1"
 pgstore "install.hetzner" "1"
 pgstore "install.watchtower" "1"
 pgstore "install.installer" "1"
-pgstore "install.prune" "1"
+# pgstore "install.prune" "1"
 pgstore "install.mountcheck" "1"
 }

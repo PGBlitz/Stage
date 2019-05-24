@@ -11,7 +11,7 @@ source "${path27}/core.sh"
 source "${path27}/keyvars.sh"
 source "${path27}/install.sh"
 
-# Execute Key Variables from variables.sh
+# Execute Key Variables from keyvars.sh
 keyvars
 
 # Make Critical Folders

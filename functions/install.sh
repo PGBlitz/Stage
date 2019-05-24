@@ -64,6 +64,5 @@ if [ ! -e "$file" ]; then
 else
 	rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
 	echo ""
-	bash /opt/plexguide/menu/interface/ending.sh
-fi
+	bash /opt/plexguide/menu/interface/ending.sh; fi
 }
