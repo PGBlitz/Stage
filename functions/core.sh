@@ -36,6 +36,6 @@ core () {
     #if [ "$start" != "$stored" ]; then
     if [ "0" != "1" ]; then #this is temp
       $1
-      cat "install.${path95}/${1}" > "install.${path95}.${1}.stored";
+      cat "${path95}/${1}" > "${path95}.${1}.stored";
     fi
 }
