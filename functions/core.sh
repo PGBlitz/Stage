@@ -31,8 +31,8 @@ core () {
     path95="/pg/var/install"
     mkdir -p "${path95}"
     vartouch "${path95}/${1}.stored"
-    start=$(cat "${path95}/${1}")
-    stored=$(cat "${path95}/${1}".stored)
+    start=$(cat "${path95}/${1}" 1>/dev/null 2>&1)
+    stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
     if [ "$start" != "$stored" ]; then
       $1
       cat "${path95}/${1}" > "${path95}.${1}.stored";
