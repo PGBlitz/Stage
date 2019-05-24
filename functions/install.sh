@@ -10,8 +10,6 @@ updateprime () {
 # Set variable numbers, plus number up to force update
 versioninfo
 
-echo "SYSTEM: Installing Key Functions"
-
 # establish temp variables
 path78="/pg/stage/functions"
 
@@ -19,10 +17,8 @@ path78="/pg/stage/functions"
 source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
 
-echo "SYSTEM: Installing Main Functions"
-
 # easy start var for easy installer
-core serverid
+serverid
 
 # assistive parts
 source "${path78}/aptupdate.sh"
