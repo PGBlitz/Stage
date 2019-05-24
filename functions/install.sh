@@ -17,9 +17,6 @@ path78="/pg/stage/functions"
 source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
 
-# easy start var for easy installer
-serverid
-
 # assistive parts
 source "${path78}/aptupdate.sh"
 source "${path78}/dependency.sh"
