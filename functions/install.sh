@@ -45,13 +45,22 @@ source "${path78}/pgshield.sh"
 
 }
 
-alias_install () { ansible-playbook /pg/stage/alias/ccomands.sh }
-folders () { bash /pg/stage/functions/install/folders.sh }
-motd () { ansible-playbook /opt/plexguide/menu/motd/motd.yml }
-prune () { ansible-playbook /opt/plexguide/menu/prune/main.yml }
+alias_install () {
+  ansible-playbook /pg/stage/alias/ccomands.sh }
+folders () {
+  bash /pg/stage/functions/install/folders.sh }
+motd () {
+  ansible-playbook /opt/plexguide/menu/motd/motd.yml }
+prune () {
+  ansible-playbook /opt/plexguide/menu/prune/main.yml }
+
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
-pgcore() { if [ ! -e "/opt/coreapps/place.holder" ]; then ansible-playbook /pg/appscore/pgboxcore.yml; fi }
-pgcommunity() { if [ ! -e "/opt/communityapps/place.holder" ]; then ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi }
+pgcore() {
+  if [ ! -e "/opt/coreapps/place.holder" ]; then
+  ansible-playbook /pg/appscore/pgboxcore.yml; fi }
+pgcommunity() {
+  if [ ! -e "/opt/communityapps/place.holder" ]; then
+  ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi }
 
 downloadpg() {
   rm -rf /opt/plexguide
