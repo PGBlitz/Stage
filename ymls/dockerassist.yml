@@ -12,7 +12,7 @@
 ########################################## Install Script
   - name: Check DockerAssist Service
     stat:
-      path: "/etc/systemd/system/assistservice"
+      path: "/etc/systemd/system/assistservice.service"
     register: assistservice
 
   - name: Install Docker Reboot
@@ -29,7 +29,7 @@
   - name: Install DockerAssist Service
     template:
       src: /pg/stage/ymls/templates/assistservice.sh
-      dest: /etc/systemd/system/assistservice
+      dest: /etc/systemd/system/assistservice.service
       force: yes
 
   - name: Daemon-Reload
