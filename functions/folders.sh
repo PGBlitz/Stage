@@ -51,6 +51,8 @@ folders () {
 
   #misc
     fcreate /pg/tmp
+    fcreate /pg/data
+    fcreate /pg/data/portainer
     fcreate /pg/coreapps
     fcreate /pg/communityapps
     fcreate /pg/transfer
