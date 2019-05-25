@@ -28,7 +28,7 @@
 
   - name: Install DockerAssist Service
     template:
-      src: /pg/stage/ymls/templates/assistservice.sh
+      src: /pg/stage/ymls/templates/assist.service
       dest: /etc/systemd/system/assist.service
       force: yes
 
