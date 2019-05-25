@@ -60,20 +60,20 @@ motd () {
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
 pgcore() {
   if [ ! -e "/opt/coreapps/place.holder" ]; then
-  ansible-playbook /pg/appscore/pgboxcore.yml; fi
+  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcommunity.yml; fi
 }
 
 pgcommunity() {
   if [ ! -e "/opt/communityapps/place.holder" ]; then
-  ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi
+  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcommunity.yml; fi
 }
 
 downloadpg() {
-  rm -rf /opt/plexguide
-  git clone https://github.com/PGBlitz/PGBlitz.com.git /opt/plexguide
-  cp /pg/appscommunity/menu/interface/alias/templates/plexguide /bin/
-  cp /opt/plexguide/menu/interface/alias/templates/plexguide /bin/plexguide
-}
+  rm -rf /pg/pgblitz
+  git clone https://github.com/PGBlitz/PGBlitz.com.git /pg/pgblitz
+  cp /pg/pgblitz/menu/interface/alias/templates/pg /bin
+  cp /pg/pgblitz/menu/interface/alias/templates/plexguide /bin
+  cp /pg/pgblitz/menu/interface/alias/templates/pgblitz /bin
 
 exitcheck() {
   bash /opt/plexguide/menu/version/file.sh

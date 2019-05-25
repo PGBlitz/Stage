@@ -26,7 +26,6 @@ if [[ $(cat /pg/var/install.roles) != "$rolenumber" ]]; then
   rm -rf /pg/communityapps
   rm -rf /pg/coreapps
   rm -rf /pg/pgshield
-
   pgcore
   pgcommunity
   pgshield
@@ -38,9 +37,8 @@ fi
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud
-  core watchtower
+  core watchtower &>/dev/null &
   core prune
-  customcontainers &>/dev/null &
   pgedition
   core mountcheck
   emergency
