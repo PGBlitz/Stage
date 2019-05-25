@@ -6,11 +6,11 @@
 # GNU:        General Public License v3.0
 ################################################################################
 pgshield() {
-if [ ! -e "/opt/pgshield/place.holder" ]; then
+if [ ! -e "/pg/pgshield/place.holder" ]; then
 echo 'pgshield' > /pg/var/pgcloner.rolename
 echo 'PGShield' > /pg/var/pgcloner.roleproper
 echo 'PGShield' > /pg/var/pgcloner.projectname
 echo '87' > /pg/var/pgcloner.projectversion
 echo 'pgshield.sh' > /pg/var/pgcloner.startlink
-ansible-playbook "/opt/plexguide/menu/pgcloner/corev2/primary.yml"; fi
+ansible-playbook "/pg/pgblitz/menu/pgcloner/corev2/primary.yml"; fi
 }
