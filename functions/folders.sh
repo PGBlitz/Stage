@@ -51,13 +51,13 @@ folders () {
 
   #misc
     fcreate /pg/tmp
-    fcreate /pg/data
+    fcreate /pg/data # folder to hold container data
     fcreate /pg/data/portainer
     fcreate /pg/coreapps
     fcreate /pg/communityapps
     fcreate /pg/transfer
     fcreate /pg/logs
-    fcreate /pg/var/keys
+    fcreate /pg/blitz/keys # utilized to store rclone keys
     fcreate /pg/nzb
     fcreate /pg/torrent
     fcreate /pg/downloads
