@@ -1,5 +1,5 @@
     [Unit]
-    Description=Move Service Daemon
+    Description=Docker Assist
     After=multi-user.target
 
     [Service]
