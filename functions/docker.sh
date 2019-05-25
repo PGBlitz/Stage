@@ -39,6 +39,6 @@ dockerinstall () {
   fi
 }
 
-docstart () {
-ansible-playbook /opt/plexguide/menu/pg.yml --tags docstart
+dockerassist () {
+  ansible-playbook /pg/stage/ymls/dockerassist.yml
 }

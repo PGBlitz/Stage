@@ -17,7 +17,7 @@ pginstall () {
   # - good - core dependency
   # - good - core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall
-  core docstart
+  core dockerassist
 
 touch /pg/var/install.roles
 rolenumber=3
