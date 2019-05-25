@@ -8,6 +8,7 @@
 updateprime () {
 
 # Set variable numbers, plus number up to force update
+source "/pg/stage/versions.sh"
 versioninfo
 
 # establish temp variables
@@ -40,34 +41,48 @@ source "${path78}/pginstall.sh"
 source "${path78}/pgshield.sh"
 }
 
-alias_install () { bash /pg/stage/alias/ccomands.sh }
-folders () { bash /pg/stage/functions/install/folders.sh }
+alias_install () {
+  bash /pg/stage/alias/ccomands.sh
+}
+
+folders () {
+  bash /pg/stage/functions/install/folders.sh
+}
+
 motd () {
-  ansible-playbook /opt/plexguide/menu/motd/motd.yml }
-prune () {
-  ansible-playbook /opt/plexguide/menu/prune/main.yml }
+  ansible-playbook /opt/plexguide/menu/motd/motd.yml
+}
+
+#prune () {
+#  ansible-playbook /opt/plexguide/menu/prune/main.yml
+#}
 
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
 pgcore() {
   if [ ! -e "/opt/coreapps/place.holder" ]; then
-  ansible-playbook /pg/appscore/pgboxcore.yml; fi }
+  ansible-playbook /pg/appscore/pgboxcore.yml; fi
+}
+
 pgcommunity() {
   if [ ! -e "/opt/communityapps/place.holder" ]; then
-  ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi }
+  ansible-playbook /opt/plexguide/menu/pgbox/pgboxcommunity.yml; fi
+}
 
 downloadpg() {
   rm -rf /opt/plexguide
-  git clone https://github.com/PGBlitz/PGBlitz.com.git /opt/plexguide && cp /pg/appscommunity/menu/interface/alias/templates/plexguide /bin/
+  git clone https://github.com/PGBlitz/PGBlitz.com.git /opt/plexguide
+  cp /pg/appscommunity/menu/interface/alias/templates/plexguide /bin/
   cp /opt/plexguide/menu/interface/alias/templates/plexguide /bin/plexguide
 }
 
 exitcheck() {
   bash /opt/plexguide/menu/version/file.sh
-file="/pg/var/exited.upgrade"
-if [ ! -e "$file" ]; then
-	bash /opt/plexguide/menu/interface/ending.sh
-else
-	rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
-	echo ""
-	bash /opt/plexguide/menu/interface/ending.sh; fi
+  file="/pg/var/exited.upgrade"
+  if [ ! -e "$file" ]; then
+  	bash /opt/plexguide/menu/interface/ending.sh
+  else
+  	rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
+  	echo ""
+  	bash /opt/plexguide/menu/interface/ending.sh
+  fi
 }
