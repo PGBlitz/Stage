@@ -13,25 +13,18 @@ pginstall () {
   # - good - core aptupdate
   core alias_install &>/dev/null &
   # - good - core folders
-  serverid
+  # - good - serverid
   # - good - core dependency
   # - good - core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall
   # - good - core dockerassist
 
-touch /pg/var/install.roles
-rolenumber=3
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
-if [[ $(cat /pg/var/install.roles) != "$rolenumber" ]]; then
-  rm -rf /pg/communityapps
-  rm -rf /pg/coreapps
-  rm -rf /pg/pgshield
   pgcore
   pgcommunity
   pgshield
-  echo "$rolenumber" > /pg/var/install.roles
-fi
 
+  # Complete Rest of the Process
   portainer
   # !!! fix !!! - pgui
   core motd &>/dev/null &
