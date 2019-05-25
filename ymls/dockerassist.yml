@@ -6,43 +6,34 @@
 # GNU:        General Public License v3.0
 ################################################################################
 ---
-########################################## Scripts
-  - name: Check DockerFix Service
+- hosts: localhost
+  gather_facts: True
+  tasks:
+########################################## Install Script
+  - name: Check DockerAssist Service
     stat:
-      path: "/etc/systemd/system/v2docstart.service"
-    register: v2docstart
+      path: "/etc/systemd/system/assistservice"
+    register: assistservice
 
   - name: Install Docker Reboot
     template:
-      src: v2dockerscript.js2
-      dest: /pg/data/blitz/v2dockerscript.sh
+      src: /pg/stage/ymls/templates/assist.sh
+      dest: /pg/data/blitz/assist.sh
       force: yes
-########################################## Remove Old Services
 
-  - name: Remove Old Docker Fix
-    file:
-      state: absent
-      path: /etc/systemd/system/docstart.service
+########################################## Install Service
+  - name: Stop If DockerAssist Service Running
+    systemd: state=stopped name=assistservice
+    when: assistservice.stat.exists
 
-  - name: Remove Old Docker File
-    file:
-      state: absent
-      path: /pg/data/blitz/docstart.sh
-
-########################################## New Service
-
-  - name: Stop If DockerFix Service Running
-    systemd: state=stopped name=v2docstart
-    when: v2docstart.stat.exists
-
-  - name: Install DockerFix Service
+  - name: Install DockerAssist Service
     template:
-      src: v2docstart.js2
-      dest: /etc/systemd/system/v2docstart.service
+      src: /pg/stage/ymls/templates/assistservice.sh
+      dest: /etc/systemd/system/assistservice
       force: yes
 
   - name: Daemon-Reload
-    systemd: state=stopped name=v2docstart daemon_reload=yes enabled=no
+    systemd: state=stopped name=assistservice daemon_reload=yes enabled=no
 
-  - name: Start DockerFix
-    systemd: state=started name=v2docstart enabled=yes
+  - name: Start DockerAssist
+    systemd: state=started name=assistservice enabled=yes
