@@ -12,12 +12,12 @@ pginstall () {
   # - good - core pythonstart
   # - good - core aptupdate
   core alias_install &>/dev/null &
-  core folders
+  # - good - core folders
   serverid
   # - good - core dependency
   # - good - core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall
-  core dockerassist
+  # - good - core dockerassist
 
 touch /pg/var/install.roles
 rolenumber=3
