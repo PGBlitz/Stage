@@ -13,7 +13,7 @@
   - name: Check DockerAssist Service
     stat:
       path: "/etc/systemd/system/assist.service"
-    register: assistservice
+    register: assist
 
   - name: Install Docker Reboot
     template:
@@ -23,8 +23,8 @@
 
 ########################################## Install Service
   - name: Stop If DockerAssist Service Running
-    systemd: state=stopped name=assistservice
-    when: assistservice.stat.exists
+    systemd: state=stopped name=assist
+    when: assist.stat.exists
 
   - name: Install DockerAssist Service
     template:
@@ -33,7 +33,7 @@
       force: yes
 
   - name: Daemon-Reload
-    systemd: state=stopped name=assistservice daemon_reload=yes enabled=no
+    systemd: state=stopped name=assist daemon_reload=yes enabled=no
 
   - name: Start DockerAssist
-    systemd: state=started name=assistservice enabled=yes
+    systemd: state=started name=assist enabled=yes
