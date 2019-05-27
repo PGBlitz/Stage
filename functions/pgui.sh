@@ -16,7 +16,7 @@ pgui ()
     dstatus=$(docker ps --format '{{.Names}}' | grep "pgui")
     if [ "$dstatus" != "pgui" ]; then
     bash /pg/pgblitz/menu/pgcloner/solo/pgui.sh
-    ansible-playbook /opt/pgui/pgui.yml
+    ansible-playbook /pg/coreapps/apps/pgui.yml
     fi
 fi
 }
