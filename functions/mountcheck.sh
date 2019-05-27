@@ -6,7 +6,7 @@
 # GNU:        General Public License v3.0
 ################################################################################
 mountcheck () {
-  bash /pg/pgblitz/menu/pgcloner/solo/pgui.sh
+  bash /pg/pgblitz/pgcloner/solo/pgui.sh
   ansible-playbook /pg/coreapps/apps/pgui.yml
   ansible-playbook /pg/pgblitz/menu/pgui/mcdeploy.yml
 

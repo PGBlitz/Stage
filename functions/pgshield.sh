@@ -12,5 +12,5 @@ echo 'PGShield' > /pg/var/pgcloner.roleproper
 echo 'PGShield' > /pg/var/pgcloner.projectname
 echo '87' > /pg/var/pgcloner.projectversion
 echo 'pgshield.sh' > /pg/var/pgcloner.startlink
-ansible-playbook "/pg/pgblitz/menu/pgcloner/corev2/primary.yml"; fi
+ansible-playbook "/pg/pgblitz/pgcloner/core/primary.yml"; fi
 }
