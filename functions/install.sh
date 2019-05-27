@@ -50,17 +50,17 @@ folders () {
 }
 
 motd () {
-  ansible-playbook /opt/plexguide/menu/motd/motd.yml
+  ansible-playbook /pg/pgblitz/menu/motd/motd.yml
 }
 
 #prune () {
-#  ansible-playbook /opt/plexguide/menu/prune/main.yml
+#  ansible-playbook /pg/pgblitz/menu/prune/main.yml
 #}
 
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
 pgcore() {
   if [ ! -e "/pg/coreapps/place.holder" ]; then
-  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcommunity.yml; fi
+  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcore.yml; fi
 }
 
 pgcommunity() {
@@ -76,13 +76,13 @@ downloadpg() {
   cp /pg/pgblitz/menu/interface/alias/templates/pgblitz /bin
 
 exitcheck() {
-  bash /opt/plexguide/menu/version/file.sh
+  bash /pg/pgblitz/menu/version/file.sh
   file="/pg/var/exited.upgrade"
   if [ ! -e "$file" ]; then
-  	bash /opt/plexguide/menu/interface/ending.sh
+  	bash /pg/pgblitz/menu/interface/ending.sh
   else
   	rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
   	echo ""
-  	bash /opt/plexguide/menu/interface/ending.sh
+  	bash /pg/pgblitz/menu/interface/ending.sh
   fi
 }

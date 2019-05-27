@@ -7,5 +7,5 @@
 ################################################################################
 pgdeploy () {
   touch /pg/var/pg.edition
-  bash /opt/plexguide/menu/start/start.sh
+  bash /pg/pgblitz/menu/start/start.sh
 }

@@ -10,7 +10,7 @@ newinstall () {
   file="/pg/var/new.install"
   if [ ! -e "$file" ]; then
     touch /pg/var/pg.number && echo off > /pg/tmp/program_source
-    bash /opt/plexguide/menu/version/file.sh
+    bash /pg/pgblitz/menu/version/file.sh
     file="/pg/var/new.install"
     if [ ! -e "$file" ]; then exit; fi
  fi

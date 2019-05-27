@@ -22,11 +22,11 @@ must be installed on a FRESH BOX! Exiting!
 EOF
     exit; fi; fi
 
-source /opt/plexguide/menu/functions/functions.sh
-source /opt/plexguide/menu/functions/start.sh
-source /opt/plexguide/menu/functions/install.sh
+source /pg/pgblitz/menu/functions/functions.sh
+source /pg/pgblitz/menu/functions/start.sh
+source /pg/pgblitz/menu/functions/install.sh
 
-mkdir -p /opt/plexguide/roles/log
+mkdir -p /pg/pgblitz/roles/log
 mkdir -p /pg/var/logs
 mkdir -p /pg/data/blitz
 
@@ -34,7 +34,7 @@ sudocheck
 missingpull
 
 if [[ ! -e "/bin/pgblitz" ]]; then
-  cp /opt/plexguide/menu/alias/templates/pgblitz /bin
+  cp /pg/pgblitz/menu/alias/templates/pgblitz /bin
 fi
 
 chown 1000:1000 /bin/pgblitz &>/dev/null &

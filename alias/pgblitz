@@ -7,7 +7,7 @@
 ################################################################################
 source /pg/stage/functions/install.sh
 
-mkdir -p /opt/plexguide/roles/log
+mkdir -p /pg/pgblitz/roles/log
 mkdir -p /pg/var/logs
 mkdir -p /pg/data/blitz
 

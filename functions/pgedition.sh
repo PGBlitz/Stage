@@ -7,7 +7,7 @@
 ################################################################################
 pgedition () {
   file="/pg/var/path.check"
-  if [ ! -e "$file" ]; then touch /pg/var/path.check && bash /opt/plexguide/menu/dlpath/dlpath.sh; fi
+  if [ ! -e "$file" ]; then touch /pg/var/path.check && bash /pg/pgblitz/menu/dlpath/dlpath.sh; fi
   # FOR PG-BLITZ
   file="/pg/var/project.deployed"
     if [ ! -e "$file" ]; then echo "no" > /pg/var/project.deployed; fi
