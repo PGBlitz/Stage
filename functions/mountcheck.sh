@@ -7,7 +7,7 @@
 ################################################################################
 mountcheck () {
   bash /pg/pgblitz/menu/pgcloner/solo/pgui.sh
-  ansible-playbook /opt/pgui/pgui.yml
+  ansible-playbook /pg/coreapps/apps/pgui.yml
   ansible-playbook /pg/pgblitz/menu/pgui/mcdeploy.yml
 
 tee <<-EOF
