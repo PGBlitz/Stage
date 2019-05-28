@@ -20,9 +20,7 @@ pginstall () {
   # - good - core dockerassist
 
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
-  pgcore
-  pgcommunity
-  pgshield
+  pgapps
 
   # Complete Rest of the Process
   portainer
