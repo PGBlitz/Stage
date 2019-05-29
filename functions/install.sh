@@ -53,9 +53,9 @@ motd () {
   ansible-playbook /pg/pgblitz/menu/motd/motd.yml
 }
 
-#prune () {
-#  ansible-playbook /pg/pgblitz/menu/prune/main.yml
-#}
+prune () {
+  ansible-playbook /pg/stage/ymls/prune.yml
+}
 
 # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
 pgcore() {
