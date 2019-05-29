@@ -50,7 +50,7 @@ folders () {
 }
 
 motd () {
-  ansible-playbook /pg/pgblitz/menu/motd/motd.yml
+  ansible-playbook /pg/stage/ymls/motd/motd.yml
 }
 
 prune () {
