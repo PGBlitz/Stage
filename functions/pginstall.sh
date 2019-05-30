@@ -16,7 +16,7 @@ pginstall () {
   # - good - serverid
   # - good - core dependency
   # - good - core mergerinstall
-  # - ok (need to skip those ignore containers - core dockerinstall
+  # - ok (need to skip those ignore containers - core dockerinstall)
   # - good - core dockerassist
 
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc

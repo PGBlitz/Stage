@@ -19,6 +19,7 @@ source "${path78}/core.sh"
 source "/pg/stage/versions.sh"
 
 # assistive parts
+source "${path78}/apps.sh"
 source "${path78}/aptupdate.sh"
 source "${path78}/dependency.sh"
 source "${path78}/docker.sh"
@@ -41,12 +42,18 @@ source "${path78}/pginstall.sh"
 source "${path78}/pgshield.sh"
 }
 
+apps () {
+    # replicates apps is missing
+    # primary purpose is to pull pgui and portainer
+    bash /pg/stage/functions/apps.sh
+}
+
 alias_install () {
   bash /pg/stage/alias/ccomands.sh
 }
 
 folders () {
-  bash /pg/stage/functions/install/folders.sh
+  bash /pg/stage/functions/folders.sh
 }
 
 motd () {
