@@ -18,20 +18,26 @@ pginstall () {
   # - good - core mergerinstall
   # - ok (need to skip those ignore containers - core dockerinstall)
   # - good - core dockerassist
-
+  echo "FLAG1"
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
   pgapps
 
   # Complete Rest of the Process
   # portainer
   # pgui
+  echo "FLAG2"
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud
-  # core watchtower 
+  # core watchtower
+  echo "FLAG3"
   core prune
+  echo "FLAG4"
   pgedition
+  echo "FLAG5"
   core mountcheck
+  echo "FLAG6"
   emergency
+  echo "FLAG7"
   pgdeploy
 }
