@@ -81,6 +81,7 @@ downloadpg() {
   cp /pg/pgblitz/menu/interface/alias/templates/pg /bin
   cp /pg/pgblitz/menu/interface/alias/templates/plexguide /bin
   cp /pg/pgblitz/menu/interface/alias/templates/pgblitz /bin
+}
 
 exitcheck() {
   bash /pg/pgblitz/menu/version/file.sh
