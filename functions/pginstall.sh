@@ -28,7 +28,7 @@ pginstall () {
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud
-  watchtower #core
+  # core watchtower 
   core prune
   pgedition
   core mountcheck
