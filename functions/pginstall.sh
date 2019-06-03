@@ -16,7 +16,7 @@ pginstall () {
   serverid
   core dependency
   core mergerinstall
-  core dockerinstall)
+  core dockerinstall
   core dockerassist
 
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
