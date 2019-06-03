@@ -5,7 +5,9 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
+source "/pg/stage/functions/core.sh"
 emergency() {
+
   variable /pg/var/emergency.display "On"
 if [[ $(ls /pg/data/blitz/emergency) != "" ]]; then
 
@@ -28,6 +30,7 @@ EOF
   done <<< "$(ls /pg/data/blitz/emergency)"
 
   echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   read -n 1 -s -r -p "Acknowledge Info | Press [ENTER]"
   echo
 else
