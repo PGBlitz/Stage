@@ -64,17 +64,6 @@ prune () {
   ansible-playbook /pg/stage/ymls/prune.yml
 }
 
-# Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
-pgcore() {
-  if [ ! -e "/pg/coreapps/place.holder" ]; then
-  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcore.yml; fi
-}
-
-pgcommunity() {
-  if [ ! -e "/pg/communityapps/place.holder" ]; then
-  ansible-playbook /pg/pgblitz/menu/pgbox/pgboxcommunity.yml; fi
-}
-
 downloadpg() {
   rm -rf /pg/pgblitz
   git clone https://github.com/PGBlitz/PGBlitz.com.git /pg/pgblitz
