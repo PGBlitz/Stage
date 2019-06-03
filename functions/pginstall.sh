@@ -35,9 +35,9 @@ pginstall () {
   echo "FLAG4"
   pgedition
   echo "FLAG5"
-  core mountcheck
   echo "FLAG6"
   emergency
   echo "FLAG7"
+  pguinotice
   pgdeploy
 }
