@@ -13,18 +13,19 @@ if [[ ! -e "/pg/var/pgui.notice" ]]; then
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-↘️  PG User Interface (PGUI) Installed
+↘️  Blitz User Interface (BlitzUI) Installed
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 INFORMATION:
-PGUI is a simple interface that provides information,
-warnings, and stats that will assist both yourself and tech support!
+BlitzUI is a simple interface that provides information, warnings, and
+stats!
 
 WARNING:
 If not secure, anyone in the world can visit your interface! Protect it by
-deploy PGShield later on!
+deploying PGShield and close your ports ... or turn it off (disable)!
 
 TO TURN OFF:
-To turn this off, goto settings and turn it off/on the PG User Interface!
+To turn BlitzUI off, goto settings and turn it off/on the Blitz User
+Interface!
 
 VISIT:
 https://pgui.domain.com | http://pgui.domain.com:8555 | ipv4:8555
