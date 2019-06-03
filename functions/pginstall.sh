@@ -23,12 +23,12 @@ pginstall () {
   pgapps
 
   # Complete Rest of the Process
-  portainer
+  # portainer
   # pgui
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud
-  core watchtower &>/dev/null &
+  watchtower #core
   core prune
   pgedition
   core mountcheck
