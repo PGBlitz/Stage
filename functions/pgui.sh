@@ -7,16 +7,15 @@
 ################################################################################
 pgui ()
 {
-  # file="/pg/var/pgui.switch"
-    # if [ ! -e "$file" ]; then echo "On" > /pg/var/pgui.switch; fi
+   file="/pg/var/pgui.switch"
+     if [ ! -e "$file" ]; then echo "On" > /pg/var/pgui.switch; fi
+     pguicheck=$(cat /pg/var/pgui.switch)
+   if [[ "$pguicheck" == "On" ]]; then
 
-    # pguicheck=$(cat /pg/var/pgui.switch)
-  # if [[ "$pguicheck" == "On" ]]; then
-
-    # dstatus=$(docker ps --format '{{.Names}}' | grep "pgui")
-    # if [ "$dstatus" != "pgui" ]; then
-    # bash /pg/pgblitz/pgcloner/solo/pgui.sh
-    # ansible-playbook /pg/coreapps/apps/pgui.yml
-    # fi
-# fi
+     dstatus=$(docker ps --format '{{.Names}}' | grep "pgui")
+     if [ "$dstatus" != "pgui" ]; then
+     echo "pgui" > /pg/var/program.temp
+     bash /pg/apps/apps/pgui/start.sh # &>/dev/null &
+     fi
+ fi
 }
