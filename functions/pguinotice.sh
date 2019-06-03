@@ -32,6 +32,6 @@ https://pgui.domain.com | http://pgui.domain.com:8555 | ipv4:8555
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF
 read -p 'Acknowledge Info | Press [ENTER] ' typed < /dev/tty
-touch > /pg/var/pgui.notice
+touch /pg/var/pgui.notice
 fi
 }
