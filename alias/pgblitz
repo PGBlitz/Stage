@@ -5,13 +5,31 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-source /pg/stage/functions/install.sh
+path27="/pg/stage/functions"
 
-mkdir -p /pg/pgblitz/roles/log
-mkdir -p /pg/var/logs
-mkdir -p /pg/data/blitz
+source "${path27}/core.sh"
+source "${path27}/keyvars.sh"
+source "${path27}/install.sh"
+source "${path27}/pginstall.sh"
 
-sudocheck
-missingpull
-# pg deploy contains pgdeploy at end
-pginstall
+# Execute Key Variables from keyvars.sh
+keyvars
+
+# Make Critical Folders
+var59="/pg /pg/logs /pg/var /pg/data /pg/stage /pg/logs /pg/tmp"
+mkdir -p "${var59}"
+chmod 775 "${var59}"
+chown 1000:1000 "${var59}"
+
+# Ensures the user has proper permissions
+#sudocheck
+
+if [[ ! -e "/bin/pgblitz" ]]; then
+  cp /pg/pgblitz/menu/alias/templates/pgblitz /bin/ &>/dev/null &
+  chown 1000:1000 /bin/pgblitz
+  chmod 0755 /bin/pgblitz
+fi
+
+# if new install or update is conducted, runs through pginstall
+if [ -e "/pg/var/new.install" ]; then pginstall;
+elif [ -e "/pg/var/update.install" ]; then pginstall; fi

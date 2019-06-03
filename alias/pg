@@ -5,39 +5,31 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-file="/var/pgblitz/pg.number"
-if [ -e "$file" ]; then
-  check="$(cat /var/pgblitz/pg.number | head -c 1)"
-  if [[ "$check" == "5" || "$check" == "6" || "$check" == "7" ]]; then
+path27="/pg/stage/functions"
 
-tee <<-EOF
+source "${path27}/core.sh"
+source "${path27}/keyvars.sh"
+source "${path27}/install.sh"
+source "${path27}/pginstall.sh"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🌎  INSTALLER BLOCK: Notice
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-We detected PG Version $check is running! Per the instructions, PG 8
-must be installed on a FRESH BOX! Exiting!
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Execute Key Variables from keyvars.sh
+keyvars
 
-EOF
-    exit; fi; fi
+# Make Critical Folders
+var59="/pg /pg/logs /pg/var /pg/data /pg/stage /pg/logs /pg/tmp"
+mkdir -p "${var59}"
+chmod 775 "${var59}"
+chown 1000:1000 "${var59}"
 
-source /pg/pgblitz/menu/functions/functions.sh
-source /pg/pgblitz/menu/functions/start.sh
-source /pg/pgblitz/menu/functions/install.sh
-
-mkdir -p /pg/pgblitz/roles/log
-mkdir -p /pg/var/logs
-mkdir -p /pg/data/blitz
-
-sudocheck
-missingpull
+# Ensures the user has proper permissions
+#sudocheck
 
 if [[ ! -e "/bin/pgblitz" ]]; then
-  cp /pg/pgblitz/menu/alias/templates/pgblitz /bin
+  cp /pg/pgblitz/menu/alias/templates/pgblitz /bin/ &>/dev/null &
+  chown 1000:1000 /bin/pgblitz
+  chmod 0755 /bin/pgblitz
 fi
 
-chown 1000:1000 /bin/pgblitz &>/dev/null &
-chmod 0755 /bin/pgblitz &>/dev/null &
-# pg deploy contains pgdeploy at end
-pginstall
+# if new install or update is conducted, runs through pginstall
+if [ -e "/pg/var/new.install" ]; then pginstall;
+elif [ -e "/pg/var/update.install" ]; then pginstall; fi
