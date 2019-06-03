@@ -15,7 +15,8 @@ tee <<-EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ↘️  PG User Interface (PGUI) Installed
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-INFORMATION:  PGUI is a simple interface that provides information,
+INFORMATION:
+PGUI is a simple interface that provides information,
 warnings, and stats that will assist both yourself and tech support!
 
 WARNING:
