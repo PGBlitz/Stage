@@ -24,7 +24,7 @@ pginstall () {
 
   # Complete Rest of the Process
   portainer
-  pgui
+  # pgui
   core motd &>/dev/null &
   core hetzner &>/dev/null &
   # [good] core gcloud

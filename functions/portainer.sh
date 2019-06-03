@@ -8,6 +8,6 @@
 portainer () {
   dstatus=$(docker ps --format '{{.Names}}' | grep "portainer")
   if [ "$dstatus" != "portainer" ]; then
-  ansible-playbook /opt/coreapps/apps/portainer.yml &>/dev/null &
+    bash /pg/apps/apps/portainer/start.sh
   fi
 }
