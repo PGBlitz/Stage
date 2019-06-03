@@ -15,6 +15,7 @@ pgui ()
      dstatus=$(docker ps --format '{{.Names}}' | grep "pgui")
      if [ "$dstatus" != "pgui" ]; then
      echo "pgui" > /pg/var/program.temp
+     echo "FLAG1"
      bash /pg/apps/apps/pgui/start.sh # &>/dev/null &
      fi
  fi
