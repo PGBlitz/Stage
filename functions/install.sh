@@ -43,8 +43,6 @@ source "${path78}/pgshield.sh"
 }
 
 apps () {
-    # replicates apps is missing
-    # primary purpose is to pull pgui and portainer
     bash /pg/stage/functions/apps.sh
 }
 
@@ -58,6 +56,10 @@ folders () {
 
 motd () {
   ansible-playbook /pg/stage/ymls/motd/motd.yml
+}
+
+pgui () {
+    bash /pg/stage/functions/pgui.sh
 }
 
 prune () {
