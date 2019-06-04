@@ -6,13 +6,13 @@
 # GNU:        General Public License v3.0
 ################################################################################
 pgstore () {
-  maindir="/pg/var"
+  maindir="/pg/var/install"
   if [[ ! -e "${maindir}/${1}" ]]; then echo "${2}" > "${maindir}/${1}"; fi
   echo "${2}" > "${maindir}/${1}"
 }
 
 pgrecall () {
-  maindir="/pg/var"
+  maindir="/pg/var/install"
   if [[ ! -e "${maindir}/${1}" ]]; then touch "${maindir}/${1}"; fi
   recallvar=$(cat "${maindir}/${1}")
 }
