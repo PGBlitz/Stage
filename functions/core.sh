@@ -35,6 +35,8 @@ core () {
     stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
     if [ "$start" != "$stored" ]; then
       "{$1}"
+      echo "{$1}"
+      sleep 10
       echo "${path95}/${1}" > "${path95}/${1}.stored";
     fi
 }
