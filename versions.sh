@@ -31,6 +31,6 @@ pgstore "gcloud" "1"
 pgstore "hetzner" "1"
 pgstore "watchtower" "1"
 pgstore "installer" "1"
-# pgstore "prune" "1"
+pgstore "prune" "1"
 pgstore "mountcheck" "1"
 }
