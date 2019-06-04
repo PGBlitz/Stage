@@ -33,6 +33,8 @@ core () {
     vartouch "${path95}/${1}.stored"
     start=$(cat "${path95}/${1}" 1>/dev/null 2>&1)
     stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
+    echo "$start"
+    echo "$stored"
     if [[ "$start" != "$stored" ]]; then
       "{$1}"
       echo "{$1}"
