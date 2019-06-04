@@ -38,7 +38,3 @@ dockerinstall () {
       fi
   fi
 }
-
-dockerassist () {
-  ansible-playbook /pg/stage/ymls/dockerassist.yml
-}
