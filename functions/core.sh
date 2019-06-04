@@ -37,8 +37,6 @@ core () {
     echo "$stored"
     if [[ "$start" != "$stored" ]]; then
       "$1"
-      echo "$1"
-      sleep 10
       echo "${path95}/${1}" > "${path95}/${1}.stored";
     fi
 }

@@ -5,8 +5,6 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-source "/pg/stage/functions/core.sh"
-
 pginstall () {
 # Runs through the install process order
   updateprime
