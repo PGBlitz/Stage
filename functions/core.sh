@@ -34,8 +34,7 @@ core () {
     start=$(cat "${path95}/${1}" 1>/dev/null 2>&1)
     stored=$(cat "${path95}/${1}".stored 1>/dev/null 2>&1)
     if [ "$start" != "$stored" ]; then
-    # if [ "0" != "1" ]; then #this is temp
-      $1
-      echo "${path95}/${1}" > "${path95}.${1}.stored";
+      bash "/pg/stage/functions/{$1}.sh"
+      echo "${path95}/${1}" > "${path95}/${1}.stored";
     fi
 }
