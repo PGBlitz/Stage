@@ -18,9 +18,10 @@ pginstall () {
   serverid
   core dependency
   core mergerinstall
+  echo "FLAG1"
   core dockerinstall
   core dockerassist
-
+  echo "FLAG2"
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
   pgapps
 
