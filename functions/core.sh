@@ -33,8 +33,6 @@ core () {
     vartouch "${path95}/${1}.stored"
     start=$(cat "${path95}/${1}")
     stored=$(cat "${path95}/${1}".stored)
-    echo "$start"
-    echo "$stored"
     if [[ "$start" != "$stored" ]]; then
       "$1"
       echo "${path95}/${1}" > "${path95}/${1}.stored";
