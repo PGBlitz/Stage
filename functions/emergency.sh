@@ -9,7 +9,7 @@ source "/pg/stage/functions/core.sh"
 emergency() {
 
   variable /pg/var/emergency.display "On"
-if [[ $(ls /pg/blitz/emergency) != "" ]]; then
+if [[ $(ls /pg/var/emergency) != "" ]]; then
 
 # If not on, do not display emergency logs
 if [[ $(cat /pg/var/emergency.display) == "On" ]]; then
@@ -26,8 +26,8 @@ EOF
   countmessage=0
   while read p; do
     let countmessage++
-    echo -n "${countmessage}. " && cat /pg/blitz/emergency/$p
-  done <<< "$(ls /pg/blitz/emergency)"
+    echo -n "${countmessage}. " && cat /pg/var/emergency/$p
+  done <<< "$(ls /pg/var/emergency)"
 
   echo
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

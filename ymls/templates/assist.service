@@ -6,7 +6,7 @@
     Type=simple
     User=root
     Group=root
-    ExecStart=/bin/bash /pg/blitz/assist.sh
+    ExecStart=/bin/bash /pg/var/assist.sh
     TimeoutStopSec=20
     KillMode=process
     RemainAfterExit=yes

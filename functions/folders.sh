@@ -18,7 +18,6 @@ folders () {
   echo ""
   #start
   fcreate /pg/transfer
-  fcreate /pg/blitz
 
   #gcrypt
   fcreate /pg/gc
@@ -58,7 +57,7 @@ folders () {
     fcreate /pg/communityapps
     fcreate /pg/transfer
     fcreate /pg/logs
-    fcreate /pg/blitz/keys # utilized to store rclone keys
+    fcreate /pg/var/keys # utilized to store rclone keys
     fcreate /pg/nzb
     fcreate /pg/torrent
     fcreate /pg/downloads

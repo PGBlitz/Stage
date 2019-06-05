@@ -18,7 +18,7 @@
   - name: Install Docker Reboot
     template:
       src: /pg/stage/ymls/templates/assist.sh
-      dest: /pg/blitz/assist.sh
+      dest: /pg/var/assist.sh
       force: yes
 
 ########################################## Install Service
