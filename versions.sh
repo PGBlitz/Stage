@@ -14,7 +14,7 @@ source "/pg/stage/functions/core.sh"
 versioninfo () {
 # Set variable numbers, plus number up to force update
 # PGStore command can be found @ core.sh
-pgstore "mergerfs" "1"
+pgstore "mergerinstall" "1"
 pgstore "pythonstart" "1"
 pgstore "aptupdate" "1"
 pgstore "preinstall" "1"
@@ -23,7 +23,7 @@ pgstore "dockerinstall" "1"
 pgstore "server" "1"
 pgstore "serverid" "1"
 pgstore "dependency" "1"
-pgstore "dockerstart" "1"
+pgstore "dockerassist" "1"
 pgstore "motd" "1"
 pgstore "alias" "1"
 pgstore "cleaner" "1"
