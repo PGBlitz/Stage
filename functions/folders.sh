@@ -57,6 +57,7 @@ folders () {
     fcreate /pg/communityapps
     fcreate /pg/transfer
     fcreate /pg/logs
+    fcreate /pg/var/emergency
     fcreate /pg/var/keys # utilized to store rclone keys
     fcreate /pg/nzb
     fcreate /pg/torrent
