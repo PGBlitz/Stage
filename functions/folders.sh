@@ -34,17 +34,17 @@ folders () {
     fcreate /pg/gd/ebooks
 
   #tcrypt
-  fcreate /pg/tc
-    fcreate /pg/tc/tv
-    fcreate /pg/tc/movies
-    fcreate /pg/tc/music
-    fcreate /pg/tc/ebooks
+  fcreate /pg/sc
+    fcreate /pg/sc/tv
+    fcreate /pg/sc/movies
+    fcreate /pg/sc/music
+    fcreate /pg/sc/ebooks
 
   #tdrive
-    fcreate /pg/td/tv
-    fcreate /pg/td/movies
-    fcreate /pg/td/music
-    fcreate /pg/td/ebooks
+    fcreate /pg/sd/tv
+    fcreate /pg/sd/movies
+    fcreate /pg/sd/music
+    fcreate /pg/sd/ebooks
 
   #unity
     fcreate /pg/unity
