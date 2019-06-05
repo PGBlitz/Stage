@@ -15,7 +15,7 @@ versioninfo () {
 # Set variable numbers, plus number up to force update
 # PGStore command can be found @ core.sh
 pgstore "mergerinstall" "1"
-pgstore "pythonstart" "1"
+pgstore "pythonstart" "1
 pgstore "aptupdate" "1"
 pgstore "preinstall" "1"
 pgstore "folders" "1"

@@ -18,6 +18,7 @@ folders () {
   echo ""
   #start
   fcreate /pg/transfer
+  fcreate /pg/blitz
 
   #gcrypt
   fcreate /pg/gc

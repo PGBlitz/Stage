@@ -10,6 +10,6 @@ echo "-----------------------------------------------------"
 echo "SYSTEM MESSAGE: Please Copy Your Information"
 echo "-----------------------------------------------------"
 echo ""
-cat /pg/data/blitz/vpn.info
+cat /pg/blitz/vpn.info
 echo ""
 echo "Config Info: Visit http://pgvpn.pgblitz.com or WIKI"
