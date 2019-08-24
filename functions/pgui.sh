@@ -14,7 +14,7 @@ pgui ()
 
      dstatus=$(docker ps --format '{{.Names}}' | grep "pgui")
      if [ "$dstatus" != "pgui" ]; then
-     bash /pg/apps/apps/pgui/start.sh
+     bash /pg/apps/programs/pgui/start.sh
      fi
  fi
 }
