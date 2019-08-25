@@ -8,7 +8,7 @@
 mainstart() {
 echo ""
 echo "💬  Pulling Update Files - Please Wait"
-file="/pg/install/place.holder"
+file="/pg/pgstage/place.holder"
 waitvar=0
 while [ "$waitvar" == "0" ]; do
 	sleep .5
