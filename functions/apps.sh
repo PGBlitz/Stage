@@ -12,6 +12,6 @@ pgapps () {
     echo 'Apps' > /pg/var/pgcloner.projectname
     echo 'v90' > /pg/var/pgcloner.projectversion
     echo 'pgbox.sh' > /pg/var/pgcloner.startlink
-    ansible-playbook "/pg/pgblitz/pgcloner/core/primary.yml"
+    ansible-playbook "/pg/stage/pgcloner/core/primary.yml"
   fi
 }
