@@ -11,7 +11,8 @@ updateprime () {
 
 # user sets version install if not present
 if [[ ! -e "/pg/var/first.update" ]]; then
-  bash /pg/stage/pgcloner/solo/update.sh
+  if [[ ! -e "/pg/install/versions.sh" ]]; then
+  bash /pg/stage/pgcloner/solo/update.sh; fi
   mainstart
 fi
 

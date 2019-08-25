@@ -22,7 +22,6 @@ mkdir -p "${var59}"
 chmod 775 "${var59}"
 chown 1000:1000 "${var59}"
 
-echo FLAG 1
 # Ensures the user has proper permissions
 #sudocheck
 
