@@ -91,9 +91,9 @@ fi
 }
 
 #rm -rf /pg/pgstage
-#mkdir -p /pg/pgstage
-#ansible-playbook /pg/pgblitz/menu/pgstage/pgstage.yml #&>/de v/null &
-#mainstart
+mkdir -p /pg/pgstage
+if [[ ! -e "/pg/pgstage/place.holder" ]]; then
+ansible-playbook /pg/pgblitz/menu/pgstage/pgstage.yml; fi
 
 # user sets version install if not present
 if [[ ! -e "/pg/var/first.update" ]]; then
