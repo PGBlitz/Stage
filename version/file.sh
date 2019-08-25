@@ -62,7 +62,7 @@ if [[ "$typed" == "exit" || "$typed" == "EXIT" || "$typed" == "Exit" ]]; then
 if [ "$storage" != "" ]; then
   break=yes
   echo $storage > /pg/var/pg.number
-  ansible-playbook /pg/pgblitz/menu/version/choice.yml
+  ansible-playbook /pg/stage/version/choice.yml
 
 tee <<-EOF
 
