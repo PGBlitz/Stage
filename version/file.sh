@@ -8,7 +8,7 @@
 mainstart() {
 echo ""
 echo "💬  Pulling Update Files - Please Wait"
-file="/pg/pgstage/place.holder"
+file="/pg/install/place.holder"
 waitvar=0
 while [ "$waitvar" == "0" ]; do
 	sleep .5
@@ -16,8 +16,8 @@ while [ "$waitvar" == "0" ]; do
 done
 
 pgnumber=$(cat "/pg/var/pg.number")
-latest=$(cat "/pg/pgstage/versions.sh" | head -n1)
-beta=$(cat /pg/pgstage/versions.sh | sed -n 2p)
+latest=$(cat "/pg/install/versions.sh" | head -n1)
+beta=$(cat /pg/install/versions.sh | sed -n 2p)
 
 tee <<-EOF
 
@@ -36,7 +36,7 @@ EOF
 
 break=no
 read -p '🌍  TYPE a PG Version | PRESS ENTER: ' typed
-storage=$(grep $typed /pg/pgstage/versions.sh)
+storage=$(grep $typed /pg/install/versions.sh)
 
 parttwo
 }
