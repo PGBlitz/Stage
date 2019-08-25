@@ -25,7 +25,7 @@ while read p; do
   num=$[num+1]
   if [ "$num" == 7 ]; then
     num=0
-    echo "  " >> /pg/var/program.temp
+    echo " " >> /pg/var/program.temp
   fi
 done </pg/install/versions.sh
 
