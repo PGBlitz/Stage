@@ -62,6 +62,7 @@ touch /pg/var/new.install
 file="/pg/var/community.app"
 if [ -e "$file" ]; then rm -rf /pg/var/community.app; fi
 
+touch /pg/var/first.update
 exit
 else
 tee <<-EOF
