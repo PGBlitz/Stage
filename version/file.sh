@@ -29,8 +29,7 @@ while read p; do
   fi
 done </pg/install/versions.sh
 
-versionlist=$(cat /pg/install/versions.sh)
-
+versionlist=$(cat /pg/tmp/version.temp)
 
 tee <<-EOF
 
