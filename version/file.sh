@@ -90,7 +90,7 @@ EOF
 fi
 }
 
-rm -rf /pg/pgstage
-mkdir -p /pg/pgstage
-ansible-playbook /pg/pgblitz/menu/pgstage/pgstage.yml #&>/de v/null &
-mainstart
+#rm -rf /pg/pgstage
+#mkdir -p /pg/pgstage
+#ansible-playbook /pg/pgblitz/menu/pgstage/pgstage.yml #&>/de v/null &
+#mainstart
