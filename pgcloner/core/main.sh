@@ -21,6 +21,7 @@ initial () {
   ansible-playbook "/pg/stage/pgcloner/core/primary.yml"
   echo ""
   echo "💬  Pulling Update Files - Please Wait"
+
   file="/pg/$rolename/place.holder"
   waitvar=0
   while [ "$waitvar" == "0" ]; do
