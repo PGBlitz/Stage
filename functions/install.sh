@@ -5,12 +5,15 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
+source /pg/stage/version/file.sh
+
 updateprime () {
 
 # user sets version install if not present
-#if [ -e "/pg/var/version.install" ]; then
+if [ -e "/pg/var/version.install" ]; then
+  bash /pg/stage/pgcloner/solo/update.sh
 
-#; fi
+fi
 
 
 # Set variable numbers, plus number up to force update
