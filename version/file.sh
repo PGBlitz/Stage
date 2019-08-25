@@ -15,20 +15,31 @@ while [ "$waitvar" == "0" ]; do
 	if [ -e "$file" ]; then waitvar=1; fi
 done
 
-pgnumber=$(cat "/pg/var/pg.number")
-latest=$(cat "/pg/install/versions.sh" | head -n1)
-beta=$(cat /pg/install/versions.sh | sed -n 2p)
+rm -rf /pg/tmp/version.temp
+touch /pg/tmp/version.temp
+
+num=0
+while read p; do
+  echo -n $p >> /pg/tmp/version.temp
+  echo -n " - " >> /pg/tmp/version.temp
+  num=$[num+1]
+  if [ "$num" == 7 ]; then
+    num=0
+    echo "  " >> /pg/var/program.temp
+  fi
+done </pg/var/app.list
+
+versionlist=$(cat /pg/install/versions.sh)
+
 
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📂  PG Update Interface
+📂  PG Update Interface | Current PG Version: $pgnumber
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Prior Versions? Visit > versions.pgblitz.com
+? Visit > versions.pgblitz.com
 
-Lastest:  : $latest
-Beta      : $beta
-Installed : $pgnumber
+${versionslist}
 
 Quitting? TYPE > exit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
