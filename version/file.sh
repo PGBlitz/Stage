@@ -40,7 +40,7 @@ Need More Info? Visit > versions.pgblitz.com
 
 EOF
 
-echo "${versionslist}"
+echo "${versionlist}"
 
 tee <<-EOF
 
