@@ -9,13 +9,6 @@ source /pg/stage/version/file.sh
 
 updateprime () {
 
-# user sets version install if not present
-if [[ ! -e "/pg/var/first.update" ]]; then
-  if [[ ! -e "/pg/install/versions.sh" ]]; then
-  bash /pg/stage/pgcloner/solo/update.sh; fi
-  mainstart
-fi
-
 # Set variable numbers, plus number up to force update
 source "/pg/stage/versions.sh"
 versioninfo
