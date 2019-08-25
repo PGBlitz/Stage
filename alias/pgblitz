@@ -12,6 +12,7 @@ source "${path27}/keyvars.sh"
 source "${path27}/install.sh"
 source "${path27}/pginstall.sh"
 
+echo FLAG 0
 # Execute Key Variables from keyvars.sh
 keyvars
 
@@ -22,7 +23,6 @@ chmod 775 "${var59}"
 chown 1000:1000 "${var59}"
 
 echo FLAG 1
-sleep 100
 # Ensures the user has proper permissions
 #sudocheck
 
