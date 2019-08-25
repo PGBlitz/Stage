@@ -50,7 +50,7 @@ EOF
 
 break=no
 read -p '🌍  TYPE a PG Version | PRESS ENTER: ' typed
-storage=$(grep $typed /pg/install/versions.sh)
+storage=$(grep $typed /pg/install/versions.sh | head -n1 | awk '{print $1;}')
 
 parttwo
 }
@@ -67,7 +67,7 @@ if [ "$storage" != "" ]; then
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅️  SYSTEM MESSAGE: Installing Verison - $typed - Standby!
+✅️  SYSTEM MESSAGE: Installing Verison - $storage - Standby!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF
 sleep 2
