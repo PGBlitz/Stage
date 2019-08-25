@@ -7,6 +7,12 @@
 ################################################################################
 updateprime () {
 
+# user sets version install if not present
+#if [ -e "/pg/var/version.install" ]; then
+
+#; fi
+
+
 # Set variable numbers, plus number up to force update
 source "/pg/stage/versions.sh"
 versioninfo
