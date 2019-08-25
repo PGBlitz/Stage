@@ -7,7 +7,6 @@
 ################################################################################
 
 ### FILL OUT THIS AREA ###
-rm -rf /pg/install/
 echo 'install' > /pg/var/pgcloner.rolename
 echo 'install' > /pg/var/pgcloner.roleproper
 echo 'Install' > /pg/var/pgcloner.projectname
