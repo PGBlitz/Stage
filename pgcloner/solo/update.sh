@@ -9,7 +9,7 @@
 ### FILL OUT THIS AREA ###
 rm -rf /pg/install/
 echo 'install' > /pg/var/pgcloner.rolename
-echo 'Update' > /pg/var/pgcloner.roleproper
+echo 'install' > /pg/var/pgcloner.roleproper
 echo 'Install' > /pg/var/pgcloner.projectname
 echo 'v90' > /pg/var/pgcloner.projectversion
 
