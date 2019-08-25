@@ -27,7 +27,7 @@ while read p; do
     num=0
     echo "  " >> /pg/var/program.temp
   fi
-done </pg/var/app.list
+done </pg/install/versions.sh
 
 versionlist=$(cat /pg/install/versions.sh)
 
@@ -37,9 +37,13 @@ tee <<-EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📂  PG Update Interface | Current PG Version: $pgnumber
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-? Visit > versions.pgblitz.com
+Need More Info? Visit > versions.pgblitz.com
 
-${versionslist}
+EOF
+
+echo "${versionslist}"
+
+tee <<-EOF
 
 Quitting? TYPE > exit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
