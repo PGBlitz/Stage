@@ -49,7 +49,7 @@ apps () {
 
 folders () {
   bash /pg/stage/functions/folders.sh
-  ccommands
+  bash /pg/stage/functions/ccommands.sh
   # will fix
 }
 

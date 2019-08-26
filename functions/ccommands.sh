@@ -35,3 +35,5 @@ ccommands () {
   ccreate update
   ccreate upgrade
 }
+
+ccommands
