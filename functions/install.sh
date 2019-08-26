@@ -56,7 +56,7 @@ motd () {
 }
 
 ccommands () {
-  ccommandsmain
+  bash /pg/stage/functions/ccommands.sh
 }
 
 pgui () {
