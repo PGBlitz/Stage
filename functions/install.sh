@@ -19,7 +19,7 @@ source "/pg/stage/versions.sh"
 
 # assistive parts
 source "/pg/stage/functions/apps.sh"
-source "/pg/stage/functions/alias.sh"
+source "/pg/stage/functions/ccommands.sh"
 source "/pg/stage/functions/aptupdate.sh"
 source "/pg/stage/functions/dependency.sh"
 source "/pg/stage/functions/dockerinstall.sh"
