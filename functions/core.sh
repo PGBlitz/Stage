@@ -28,13 +28,12 @@ vartouch () {
 }
 
 core () {
-    path95="/pg/var/install"
-    mkdir -p "${path95}"
-    vartouch "${path95}/${1}.stored"
-    start=$(cat "${path95}/${1}")
-    stored=$(cat "${path95}/${1}.stored")
+    mkdir -p "/pg/var/install"
+    vartouch "/pg/var/install/${1}.stored"
+    start=$(cat "/pg/var/install/${1}")
+    stored=$(cat "/pg/var/install/${1}.stored")
     if [[ "$start" != "$stored" ]]; then
       "$1"
-      cat "${path95}/${1}" > "${path95}/${1}.stored";
+      cat "/pg/var/install/${1}" > "/pg/var/install/${1}.stored";
     fi
 }
