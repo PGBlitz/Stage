@@ -8,6 +8,6 @@
 portainer () {
   dstatus=$(docker ps --format '{{.Names}}' | grep "portainer")
   if [ "$dstatus" != "portainer" ]; then
-    bash /pg/apps/apps/portainer/start.sh
+    bash /pg/apps/programs/portainer/start.sh
   fi
 }

@@ -6,7 +6,7 @@
 # GNU:        General Public License v3.0
 ################################################################################
 pgapps () {
-  if [ ! -e "/pg/apps/apps/portainer/start.sh" ]; then
+  if [ ! -e "/pg/apps/programs/portainer/start.sh" ]; then
     echo 'apps' > /pg/var/pgcloner.rolename
     echo 'Apps' > /pg/var/pgcloner.roleproper
     echo 'Apps' > /pg/var/pgcloner.projectname
