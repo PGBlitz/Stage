@@ -49,6 +49,8 @@ apps () {
 
 folders () {
   bash /pg/stage/functions/folders.sh
+  bash /pg/stage/functions/ccommands.sh
+  # will fix
 }
 
 motd () {
