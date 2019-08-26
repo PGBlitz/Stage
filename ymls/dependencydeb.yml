@@ -24,6 +24,8 @@
         - glances
         - python-pip
         - python3-pip
+        - jq
+        - moreutils 
         - python-passlib
         - zip
         - curl
