@@ -1,0 +1,104 @@
+#!/bin/bash
+#
+# Title:      PGBlitz (Reference Title File)
+# Author(s):  Admin9705 - Deiteq
+# URL:        https://pgblitz.com - http://github.pgblitz.com
+# GNU:        General Public License v3.0
+################################################################################
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Autoremove
+      template:
+        src: /pg/stage/ymls/aliasfiles/autoremove
+        dest: /bin/autoremove
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: Backup
+      template:
+        src: /pg/stage/ymls/aliasfiles/backup
+        dest: /bin/backup
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: Install
+      template:
+        src: /pg/stage/ymls/aliasfiles/install
+        dest: /bin/install
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: NUFS
+      template:
+        src: /pg/stage/ymls/aliasfiles/nufs
+        dest: /bin/nufs
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: PGFork
+      template:
+        src: /pg/stage/ymls/aliasfiles/pgfork
+        dest: /bin/pgfork
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: PGUpdate
+      template:
+        src: /pg/stage/ymls/aliasfiles/pgupdate
+        dest: /bin/pgupdate
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: PGVPN
+      template:
+        src: /pg/stage/ymls/aliasfiles/pgvpn
+        dest: /bin/pgvpn
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: Prune
+      template:
+        src: /pg/stage/ymls/aliasfiles/prune
+        dest: /bin/prune
+        force: yes
+        mode: 1000
+
+    - name: Reboot
+      template:
+        src: /pg/stage/ymls/aliasfiles/reboot
+        dest: /bin/reboot
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: SLIST
+      template:
+        src: /pg/stage/ymls/aliasfiles/slist
+        dest: /bin/slist
+        force: yes
+        mode: 1000
+
+    - name: SUFS
+      template:
+        src: /pg/stage/ymls/aliasfiles/sufs
+        dest: /bin/sufs
+        force: yes
+        mode: 0775
+        owner: 1000
+
+    - name: Upgrade
+      template:
+        src: /pg/stage/ymls/aliasfiles/upgrade
+        dest: /bin/upgrade
+        force: yes
+        mode: 0775
+        owner: 1000
