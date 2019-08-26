@@ -100,4 +100,12 @@ if [[ ! -e "/pg/var/first.update" ]]; then
   if [[ ! -e "/pg/install/versions.sh" ]]; then
   bash /pg/stage/pgcloner/solo/update.sh; fi
   mainstart
+
+tee <<-EOF
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅️   TYPE [pgblitz] or [pg] or [plexguide] to CONTINUE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EOF
 fi
