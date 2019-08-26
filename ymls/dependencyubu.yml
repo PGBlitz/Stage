@@ -29,6 +29,8 @@
         - { package: "htop" }
         - { package: "openssh-server" }
         - { package: "dirmngr" }
+        - { package: "jq" }
+        - { package: "moreutils" }
         - { package: "npm" }
         - { package: "zip" }
         - { package: "apt-transport-https" }
@@ -47,6 +49,7 @@
         - { package: "gawk" }
         - { package: "python-lxml" }
         - { package: "acl" }
+
 
       # apt:
       #   name:
