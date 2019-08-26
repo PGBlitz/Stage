@@ -47,16 +47,16 @@ apps () {
     bash /pg/stage/functions/apps.sh
 }
 
-alias_install () {
-  bash /pg/stage/alias/ccomands.sh
-}
-
 folders () {
   bash /pg/stage/functions/folders.sh
 }
 
 motd () {
   ansible-playbook /pg/stage/ymls/motd/motd.yml
+}
+
+ccommands () {
+  ccommandsmain
 }
 
 pgui () {

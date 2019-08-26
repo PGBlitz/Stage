@@ -7,7 +7,7 @@
 ################################################################################
 
 #stands for create commands (cc)
-ccommands () {
+ccommandsmain () {
 
   ccreate () {
       cp "/pg/stage/alias/$1" "/bin/$1"
