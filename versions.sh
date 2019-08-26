@@ -17,6 +17,7 @@ versioninfo () {
 pgstore "mergerinstall" "1"
 pgstore "alias_install" "1"
 pgstore "pythonstart" "1"
+pgstore "ccommands" "1"
 pgstore "aptupdate" "1"
 pgstore "preinstall" "1"
 pgstore "folders" "1"
