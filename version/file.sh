@@ -77,6 +77,15 @@ file="/pg/var/community.app"
 if [ -e "$file" ]; then rm -rf /pg/var/community.app; fi
 
 touch /pg/var/first.update
+tee <<-EOF
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅️   TYPE [pgblitz] or [pg] or [plexguide] to CONTINUE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EOF
+sleep 1.5
+pgblitz
 exit
 else
 tee <<-EOF
@@ -101,11 +110,4 @@ if [[ ! -e "/pg/var/first.update" ]]; then
   bash /pg/stage/pgcloner/solo/update.sh; fi
   mainstart
 
-tee <<-EOF
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅️   TYPE [pgblitz] or [pg] or [plexguide] to CONTINUE!
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EOF
 fi
