@@ -11,6 +11,5 @@ endingcheck() {
   if [ -e "$file" ]; then
     bash /pg/stage/files/ending.sh
     rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
-    echo ""
   fi
 }
