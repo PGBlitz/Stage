@@ -52,6 +52,7 @@ EOF
 break=no
 read -p '🌍  TYPE a PG Version | PRESS ENTER: ' typed
 storage=$(grep $typed /pg/install/versions.sh | head -n1 | awk '{print $1;}')
+if [[ "$storage" != "exit" ]]; then echo "$storage" > /pg/var/pg.number; fi
 
 parttwo
 }
@@ -81,7 +82,7 @@ touch /pg/var/first.update
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅️   TYPE [pgblitz] or [pg] or [plexguide] to CONTINUE!
+✅️   STARTING: Install Process
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 EOF
@@ -110,5 +111,4 @@ if [[ ! -e "/pg/var/first.update" ]]; then
   if [[ ! -e "/pg/install/versions.sh" ]]; then
   bash /pg/stage/pgcloner/solo/update.sh; fi
   mainstart
-
 fi
