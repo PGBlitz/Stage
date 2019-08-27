@@ -6,7 +6,7 @@
 # GNU:        General Public License v3.0
 ################################################################################
 endingcheck() {
-  bash /pg/pgstage/version/file.sh
+  bash /pg/stage/version/file.sh
   file="/pg/var/exited.upgrade"
   if [ ! -e "$file" ]; then
     bash /pg/stage/files/ending.sh
