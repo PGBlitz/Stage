@@ -52,7 +52,7 @@ EOF
 break=no
 read -p '🌍  TYPE a PG Version | PRESS ENTER: ' typed
 storage=$(grep $typed /pg/install/versions.sh | head -n1 | awk '{print $1;}')
-if [[ "$storage" != "exit" ]]; then
+if [[ "$storage" == "exit" ]]; then
 	echo "$storage" > /pg/var/pg.number
 	touch /pg/var/exited.upgrade
 fi
