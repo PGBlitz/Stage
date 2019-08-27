@@ -45,3 +45,4 @@ tee <<-EOF
 EOF
   sleep 2
 fi
+}
