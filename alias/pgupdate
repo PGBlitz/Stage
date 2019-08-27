@@ -6,8 +6,8 @@
 # GNU:        General Public License v3.0
 ################################################################################
 source /pg/stage/functions/sudocheck.sh
-source /pg/stage/restorefiles.sh
-source /pg/stage/endingcheck.sh
+source /pg/stage/functions/restorefiles.sh
+source /pg/stage/functions/endingcheck.sh
 
 sudocheck
 restorefiles
