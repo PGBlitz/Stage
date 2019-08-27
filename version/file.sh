@@ -32,8 +32,6 @@ done </pg/install/versions.sh
 versionlist=$(cat /pg/tmp/version.temp)
 versionlist=${versionlist::-2}
 
-)
-
 tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
