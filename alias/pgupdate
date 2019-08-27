@@ -12,7 +12,5 @@ source /pg/stage/version/file.sh
 
 sudocheck
 restorecheck
-
-
-
+mainstart
 endingcheck
