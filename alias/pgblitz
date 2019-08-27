@@ -37,7 +37,7 @@ elif [ -e "/pg/var/update.install" ]; then pginstall; fi
 # pgstage
 readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
 touch /pg/var/pg.stage
-storedstage=$(cat /var/pg/pg.stage)
+storedstage=$(cat /pg/var/pg.stage)
 
 if [[ "$readstage" != "$storedstage" ]]; then
 bash /pg/stage/pgcloner/solo/stage.sh; fi
