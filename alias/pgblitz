@@ -39,7 +39,7 @@ storedstage=$(cat /pg/var/pg.stage)
 
 if [[ "$readstage" != "$storedstage" ]]; then
 cp /pg/stage/pgcloner/solo/stage.sh /pg/tmp/stage.sh
-cp /pg/stage/pgcloner/core/primary.yml /pg/stage/primary.yml
+cp /pg/stage/pgcloner/core/primary.yml /pg/tmp/primary.yml
 bash /pg/tmp/stage.sh; fi
 
 # if new install or update is conducted, runs through pginstall
