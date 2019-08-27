@@ -13,12 +13,13 @@ pginstall () {
   core aptupdate
   core alias_install &>/dev/null &
   core folders
+  core ccommands
   serverid
   core dependency
   core mergerinstall
   core dockerinstall
   core dockerassist
-  
+
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
   pgapps
 
