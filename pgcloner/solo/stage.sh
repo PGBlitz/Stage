@@ -10,7 +10,7 @@ readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
 ### FILL OUT THIS AREA ###
 echo 'stage' > /pg/var/pgcloner.rolename
 echo 'stage' > /pg/var/pgcloner.roleproper
-echo 'PGStage' > /pg/var/pgcloner.projectname
+echo 'Stage' > /pg/var/pgcloner.projectname
 echo "$readstage" > /pg/var/pgcloner.projectversion
 
 ### START PROCESS
