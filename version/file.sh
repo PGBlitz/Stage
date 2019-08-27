@@ -28,7 +28,6 @@ while read p; do
     echo " " >> /pg/var/program.temp
   fi
 done </pg/install/versions.sh
-v2=${v::-4}
 
 versionlist=$(cat /pg/tmp/version.temp)
 versionlist=${versionlist::-2}
