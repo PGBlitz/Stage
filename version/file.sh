@@ -5,6 +5,8 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
+source /pg/stage/functions/endingcheck.sh
+
 mainstart() {
 echo ""
 echo "💬  Pulling Update Files - Please Wait"
@@ -55,6 +57,7 @@ storage=$(grep $typed /pg/install/versions.sh | head -n1 | awk '{print $1;}')
 if [[ "$typed" == "exit" || "$typed" == "Exit" || "$typed" == "EXIT" ]]; then
 	echo "$typed" > /pg/var/pg.number
 	touch /pg/var/exited.upgrade
+	endingcheck
 fi
 
 parttwo
