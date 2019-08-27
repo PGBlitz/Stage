@@ -8,7 +8,11 @@
 source /pg/stage/functions/sudocheck.sh
 source /pg/stage/functions/restorecheck.sh
 source /pg/stage/functions/endingcheck.sh
+source /pg/stage/version/file.sh
 
 sudocheck
 restorecheck
+
+
+
 endingcheck
