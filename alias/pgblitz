@@ -36,7 +36,9 @@ elif [ -e "/pg/var/update.install" ]; then pginstall; fi
 
 # pgstage
 readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
-touch /pg/var/pg.stage
+if [[ ! -e "/pg/var/pg.stage" ]]; then
+echo "$readstage" > /pg/var/pg.stage
+touch /pg/var/pg.stage; fi 
 storedstage=$(cat /pg/var/pg.stage)
 
 if [[ "$readstage" != "$storedstage" ]]; then
