@@ -28,4 +28,4 @@ EOF
 sleep 1.5
 file="/pg/var/community.app"
 if [ -e "$file" ]; then rm -rf /pg/var/community.app; fi
-bash /pg/pgstage/files/ending.sh
+bash /pg/stage/files/ending.sh
