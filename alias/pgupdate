@@ -10,5 +10,5 @@ source /pg/stage/functions/restorecheck.sh
 source /pg/stage/functions/endingcheck.sh
 
 sudocheck
-restorechecks
+restorecheck
 endingcheck
