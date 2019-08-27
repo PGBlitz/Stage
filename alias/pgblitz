@@ -30,16 +30,16 @@ if [[ ! -e "/bin/pgblitz" ]]; then
   chmod 0755 /bin/pgblitz
 fi
 
-# if new install or update is conducted, runs through pginstall
-if [ -e "/pg/var/new.install" ]; then pginstall;
-elif [ -e "/pg/var/update.install" ]; then pginstall; fi
-
 # pgstage
 readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
 if [[ ! -e "/pg/var/pg.stage" ]]; then
 echo "$readstage" > /pg/var/pg.stage
-touch /pg/var/pg.stage; fi 
+touch /pg/var/pg.stage; fi
 storedstage=$(cat /pg/var/pg.stage)
 
 if [[ "$readstage" != "$storedstage" ]]; then
 bash /pg/stage/pgcloner/solo/stage.sh; fi
+
+# if new install or update is conducted, runs through pginstall
+if [ -e "/pg/var/new.install" ]; then pginstall;
+elif [ -e "/pg/var/update.install" ]; then pginstall; fi
