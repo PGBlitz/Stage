@@ -11,6 +11,10 @@ source /pg/stage/functions/endingcheck.sh
 source /pg/stage/version/file.sh
 
 sudocheck
+echo 1
 restorecheck
+echo 2
 mainstart
+echo 3
 endingcheck
+echo 4
