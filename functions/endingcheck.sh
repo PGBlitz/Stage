@@ -8,11 +8,10 @@
 endingcheck() {
   bash /pg/stage/version/file.sh
   file="/pg/var/exited.upgrade"
-  if [ ! -e "$file" ]; then
-    bash /pg/stage/files/ending.sh
-  else
+  if [ -e "$file" ]; then
     rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
     echo ""
-    bash /pg/stage/files/ending.sh
   fi
 }
+
+bash /pg/stage/files/ending.sh
