@@ -76,7 +76,4 @@ prune () {
 downloadpg() {
   rm -rf /pg/pgblitz
   git clone https://github.com/PGBlitz/PGBlitz.com.git /pg/pgblitz
-  cp /pg/pgblitz/menu/interface/alias/templates/pg /bin
-  cp /pg/pgblitz/menu/interface/alias/templates/plexguide /bin
-  cp /pg/pgblitz/menu/interface/alias/templates/pgblitz /bin
 }

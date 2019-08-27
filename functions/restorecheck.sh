@@ -5,6 +5,16 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
+restorepg() {
+  rm -rf /pg/pgblitz
+  git clone https://github.com/PGBlitz/PGBlitz.com.git /pg/pgblitz
+}
+
+restorestage() {
+  rm -rf /pg/pgstage
+  git clone https://github.com/PGBlitz/PGStage.git /pg/stage
+}
+
 restorecheck() {
 
 # pgblitz goes missing
