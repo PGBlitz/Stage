@@ -33,3 +33,11 @@ fi
 # if new install or update is conducted, runs through pginstall
 if [ -e "/pg/var/new.install" ]; then pginstall;
 elif [ -e "/pg/var/update.install" ]; then pginstall; fi
+
+# pgstage
+readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
+touch /pg/var/pg.stage
+storedstage=$(cat /var/pg/pg.stage)
+
+if [[ "$readstage" != "$storedstage" ]]; then
+bash /pg/stage/pgcloner/solo/stage.sh; fi
