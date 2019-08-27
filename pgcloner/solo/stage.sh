@@ -11,7 +11,7 @@ readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
 echo 'stage' > /pg/var/pgcloner.rolename
 echo 'stage' > /pg/var/pgcloner.roleproper
 echo 'Stage' > /pg/var/pgcloner.projectname
-echo "v90" > /pg/var/pgcloner.projectversion
+echo "$readstage" > /pg/var/pgcloner.projectversion
 
 ### START PROCESS
-ansible-playbook /pg/stage/pgcloner/core/primary.yml
+ansible-playbook /pg/tmp/primary.yml
