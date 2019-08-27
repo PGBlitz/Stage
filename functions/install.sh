@@ -41,6 +41,10 @@ source "/pg/stage/functions/watchtower.sh"
 source "/pg/stage/functions/pginstall.sh"
 source "/pg/stage/functions/prune.sh"
 source "/pg/stage/functions/pgshield.sh"
+
+# misc functions
+source "/pg/stage/functions/endingcheck.sh"
+
 }
 
 apps () {
@@ -75,16 +79,4 @@ downloadpg() {
   cp /pg/pgblitz/menu/interface/alias/templates/pg /bin
   cp /pg/pgblitz/menu/interface/alias/templates/plexguide /bin
   cp /pg/pgblitz/menu/interface/alias/templates/pgblitz /bin
-}
-
-exitcheck() {
-  bash /pg/pgblitz/menu/version/file.sh
-  file="/pg/var/exited.upgrade"
-  if [ ! -e "$file" ]; then
-  	bash /pg/pgblitz/menu/interface/ending.sh
-  else
-  	rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
-  	echo ""
-  	bash /pg/pgblitz/menu/interface/ending.sh
-  fi
 }

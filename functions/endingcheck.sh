@@ -6,13 +6,13 @@
 # GNU:        General Public License v3.0
 ################################################################################
 endingcheck() {
-  bash /opt/plexguide/menu/version/file.sh
-  file="/var/plexguide/exited.upgrade"
+  bash /pg/pgstage/version/file.sh
+  file="/pg/var/exited.upgrade"
   if [ ! -e "$file" ]; then
-    bash /opt/plexguide/menu/interface/ending.sh
+    bash /pg/pgstage/files/ending.sh
   else
     rm -rf /pg/var/exited.upgrade 1>/dev/null 2>&1
     echo ""
-    bash /opt/plexguide/menu/interface/ending.sh
+    bash /pg/pgstage/files/ending.sh
   fi
 }

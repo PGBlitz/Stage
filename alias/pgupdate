@@ -11,4 +11,4 @@ source /pg/stage/endingcheck.sh
 
 sudocheck
 restorefiles
-exitcheck
+endingcheck
