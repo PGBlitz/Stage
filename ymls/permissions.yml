@@ -12,7 +12,7 @@
     service_vars:
       - {name: permissions.service}
   tasks:
-    
+
     - name: Checking Existing Service Name
       stat:
         path: "/etc/systemd/system/{{ item.name }}"
@@ -34,7 +34,7 @@
     - name: "Install - Permissions Service"
       template:
         src: "/pg/stage/service/permissions.service"
-        dest: "/etc/systemd/system/permisisons.service"
+        dest: "/etc/systemd/system/permissions.service"
         force: yes
       ignore_errors: yes
 
