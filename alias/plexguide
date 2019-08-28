@@ -1,10 +1,3 @@
-#!/bin/bash
-#
-# Title:      PGBlitz (Reference Title File)
-# Author(s):  Admin9705
-# URL:        https://pgblitz.com - http://github.pgblitz.com
-# GNU:        General Public License v3.0
-################################################################################
 path27="/pg/stage/functions"
 
 source "${path27}/core.sh"
@@ -29,6 +22,19 @@ if [[ ! -e "/bin/pgblitz" ]]; then
   chown 1000:1000 /bin/pgblitz
   chmod 0755 /bin/pgblitz
 fi
+
+# pgstage
+readstage=$(jq -r '.pgstage' /pg/pgblitz/stage.json)
+if [[ ! -e "/pg/var/pg.stage" ]]; then
+echo "$readstage" > /pg/var/pg.stage
+touch /pg/var/pg.stage; fi
+storedstage=$(cat /pg/var/pg.stage)
+
+if [[ "$readstage" != "$storedstage" ]]; then
+cp /pg/stage/pgcloner/solo/stage.sh /pg/tmp/stage.sh
+cp /pg/stage/pgcloner/core/primary.yml /pg/tmp/primary.yml
+bash /pg/tmp/stage.sh
+echo "$readstage" > /pg/var/pg.stage; fi
 
 # if new install or update is conducted, runs through pginstall
 if [ -e "/pg/var/new.install" ]; then pginstall;
