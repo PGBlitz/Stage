@@ -5,6 +5,6 @@
 # URL:        https://pgblitz.com - http://github.pgblitz.com
 # GNU:        General Public License v3.0
 ################################################################################
-prune () {
+permissions () {
     ansible-playbook "/pg/functions/service/permissions.yml"
 }
