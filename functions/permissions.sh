@@ -6,5 +6,5 @@
 # GNU:        General Public License v3.0
 ################################################################################
 permissions () {
-    ansible-playbook "/pg/functions/service/permissions.yml"
+    ansible-playbook "/pg/stage/ymls/permissions.yml"
 }
