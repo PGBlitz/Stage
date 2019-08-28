@@ -11,35 +11,35 @@
   vars:
     service_vars:
       - {name: permissions.service}
+  tasks:
+    - name: Checking Existing Service Name
+      stat:
+        path: "/etc/systemd/system/{{ item.name }}"
+      with_items: "{{ service_vars }}"
+      register: check_service_name
 
-  - name: Checking Existing Service Name
-    stat:
-      path: "/etc/systemd/system/{{ item.name }}"
-    with_items: "{{ service_vars }}"
-    register: check_service_name
+    - name: Stop If Service Is Running
+      systemd: state=stopped name={{ item.item.name }} daemon_reload=yes enabled=no
+      with_items: "{{ check_service_name.results }}"
+      when: item.stat.exists
 
-  - name: Stop If Service Is Running
-    systemd: state=stopped name={{ item.item.name }} daemon_reload=yes enabled=no
-    with_items: "{{ check_service_name.results }}"
-    when: item.stat.exists
+    - name: Remove Services
+      file:
+        path: "/etc/systemd/system/{{ item.item.name }}"
+        state: absent
+      with_items: "{{ check_service_name.results }}"
+      when: item.stat.exists
 
-  - name: Remove Services
-    file:
-      path: "/etc/systemd/system/{{ item.item.name }}"
-      state: absent
-    with_items: "{{ check_service_name.results }}"
-    when: item.stat.exists
+    - name: "Install - Permissions Service"
+      template:
+        src: "/pg/stage/service/permissions.service"
+        dest: "/etc/systemd/system/permisisons.service"
+        force: yes
+      ignore_errors: yes
 
-  - name: "Install - Permissions Service"
-    template:
-      src: "/pg/stage/service/permissions.service"
-      dest: "/etc/systemd/system/permisisons.service"
-      force: yes
-    ignore_errors: yes
-
-  - name: "Reloading Permissions Service"
-    systemd:
-      daemon_reload: yes
-      enabled: yes
-      state: reloaded
-      name: "permissions"
+    - name: "Reloading Permissions Service"
+      systemd:
+        daemon_reload: yes
+        enabled: yes
+        state: reloaded
+        name: "permissions"
