@@ -12,6 +12,7 @@
     service_vars:
       - {name: permissions.service}
   tasks:
+    
     - name: Checking Existing Service Name
       stat:
         path: "/etc/systemd/system/{{ item.name }}"
