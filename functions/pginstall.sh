@@ -19,6 +19,8 @@ pginstall () {
   core mergerinstall
   core dockerinstall
   core dockerassist
+  core mergerinstall
+  core permissions
 
   # Roles Ensure that PG Replicates and has once if missing; important for startup, cron and etc
   pgapps
