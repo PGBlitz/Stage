@@ -8,15 +8,8 @@
 source /pg/stage/functions/endingcheck.sh
 
 mainstart() {
-echo ""
-echo "💬  Pulling Update Files - Please Wait"
-file="/pg/pgstage/place.holder"
-waitvar=0
-while [ "$waitvar" == "0" ]; do
-	sleep .5
-	if [ -e "$file" ]; then waitvar=1; fi
-done
 
+bash /pg/stage/pgcloner/solo/update.sh
 rm -rf /pg/tmp/version.temp
 touch /pg/tmp/version.temp
 
