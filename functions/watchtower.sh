@@ -6,5 +6,5 @@
 # GNU:        General Public License v3.0
 ################################################################################
 watchtower () {
-  bash /pg/apps/apps/watchtower/start.sh
+  bash /pg/apps/programs/watchtower/start.sh
 }
