@@ -8,8 +8,8 @@ while [[ "$admin90210" == "admin90210" ]]; do
   chown -R 1000:1000 /pg/nzbget; fi
 
   if [[ -e "/pg/sabnzbd" ]]; then
-  chmod -R 775 /pg/nzbget
-  chown -R 1000:1000 /pg/nzbget; fi
+  chmod -R 775 /pg/sabnzbd
+  chown -R 1000:1000 /pg/sabnzbd; fi
 
   if [[ -e "/pg/rutorrent" ]]; then
   chmod -R 775 /pg/rutorrent
