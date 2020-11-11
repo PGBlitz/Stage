@@ -55,7 +55,7 @@ folders () {
     fcreate /pg/data/portainer
     fcreate /pg/coreapps
     fcreate /pg/communityapps
-    fcreate /pg/transfer
+    fcreate /pg/transport
     fcreate /pg/logs
     fcreate /pg/var/emergency
     fcreate /pg/var/keys # utilized to store rclone keys
