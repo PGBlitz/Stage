@@ -10,7 +10,7 @@
 echo 'install' > /pg/var/pgcloner.rolename
 echo 'install' > /pg/var/pgcloner.roleproper
 echo 'Install' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 
 ### START PROCESS
 ansible-playbook /pg/stage/pgcloner/core/primary.yml
