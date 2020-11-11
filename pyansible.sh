@@ -10,14 +10,14 @@
       python3-testresources \
       python-dev \
       python-pip
-  python3 -m pip install --disable-pip-version-check --upgrade --force-reinstall pip==19.0.2
+  python3 -m pip install --disable-pip-version-check --upgrade --force-reinstall pip==20.2.4
   python3 -m pip install --disable-pip-version-check --upgrade --force-reinstall setuptools
   python3 -m pip install --disable-pip-version-check --upgrade --force-reinstall \
       pyOpenSSL \
       requests \
       netaddr \
       lxml
-  python -m pip install --disable-pip-version-check --upgrade --force-reinstall pip==19.0.2
+  python -m pip install --disable-pip-version-check --upgrade --force-reinstall pip==20.2.4
   python -m pip install --disable-pip-version-check --upgrade --force-reinstall setuptools
     python -m pip install --disable-pip-version-check --upgrade --force-reinstall \
       pyOpenSSL \
