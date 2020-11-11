@@ -10,7 +10,7 @@
 echo 'pgclone' > /pg/var/pgcloner.rolename
 echo 'PG Clone' > /pg/var/pgcloner.roleproper
 echo 'PGClone' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 echo 'pgclone.sh' > /pg/var/pgcloner.startlink
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
