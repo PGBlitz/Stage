@@ -10,7 +10,7 @@
 echo 'pgvault' > /pg/var/pgcloner.rolename
 echo 'PG Vault' > /pg/var/pgcloner.roleproper
 echo 'PGVault' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 echo 'pgvault.sh' > /pg/var/pgcloner.startlink
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
