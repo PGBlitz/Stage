@@ -10,7 +10,7 @@
 echo 'pgshield' > /pg/var/pgcloner.rolename
 echo 'PGShield' > /pg/var/pgcloner.roleproper
 echo 'PGShield' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 echo 'pgshield.sh' > /pg/var/pgcloner.startlink
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
