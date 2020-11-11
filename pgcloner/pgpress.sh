@@ -10,7 +10,7 @@
 echo 'pgpress' > /pg/var/pgcloner.rolename
 echo 'PGPress' > /pg/var/pgcloner.roleproper
 echo 'PGPress' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 echo 'pressmain.sh' > /pg/var/pgcloner.startlink
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
