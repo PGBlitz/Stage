@@ -10,7 +10,7 @@
 echo 'portguard' > /pg/var/pgcloner.rolename
 echo 'PortGuard' > /pg/var/pgcloner.roleproper
 echo 'PortGuard' > /pg/var/pgcloner.projectname
-echo 'v90' > /pg/var/pgcloner.projectversion
+echo 'v10' > /pg/var/pgcloner.projectversion
 echo 'portguard.sh' > /pg/var/pgcloner.startlink
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
